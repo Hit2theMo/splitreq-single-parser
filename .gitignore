@@ -3,8 +3,6 @@ __pycache__/
 *$py.class
 .vscode
 resumes
-logs/*
-*.log
 dump.rdb
 venv
 test_scripts

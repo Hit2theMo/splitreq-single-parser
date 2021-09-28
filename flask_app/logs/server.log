@@ -1,0 +1,1163 @@
+2021-05-05 05:50:52,416 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-05-05 05:51:09,100 - werkzeug - INFO - 127.0.0.1 - - [05/May/2021 05:51:09] "[37mPOST /api/v1/cvparser/single HTTP/1.1[0m" 200 -
+2021-05-05 05:52:14,978 - werkzeug - INFO - 127.0.0.1 - - [05/May/2021 05:52:14] "[37mPOST /api/v1/cvparser/single HTTP/1.1[0m" 200 -
+2021-05-05 05:56:33,418 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-05-05 05:56:46,728 - batch_parsing - ERROR - Error in batch parser while parsing resume- zip_test_3
+Traceback (most recent call last):
+  File "c:\Users\Mohit Khanwale\Desktop\SplitReq\SplitReq-Parser\batch_parsing.py", line 34, in parseUnzippedResumes
+    org_file_name, file_extn = fn.split(".")
+ValueError: not enough values to unpack (expected 2, got 1)
+2021-05-05 05:56:46,731 - batch_parsing - CRITICAL - Error extracting data points from given resume batch, request sent by user- markabbot
+Traceback (most recent call last):
+  File "c:\Users\Mohit Khanwale\Desktop\SplitReq\SplitReq-Parser\batch_parsing.py", line 34, in parseUnzippedResumes
+    org_file_name, file_extn = fn.split(".")
+ValueError: not enough values to unpack (expected 2, got 1)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\Mohit Khanwale\Desktop\SplitReq\SplitReq-Parser\flask_app.py", line 273, in batchResumeParsing
+    batch_output = parseUnzippedResumes(unzip_path)
+  File "c:\Users\Mohit Khanwale\Desktop\SplitReq\SplitReq-Parser\batch_parsing.py", line 54, in parseUnzippedResumes
+    if new_file_path:
+UnboundLocalError: local variable 'new_file_path' referenced before assignment
+2021-05-05 05:56:46,737 - werkzeug - INFO - 127.0.0.1 - - [05/May/2021 05:56:46] "[37mPOST /api/v1/cvparser/batch HTTP/1.1[0m" 200 -
+2021-05-05 05:59:09,074 - resume_parser - ERROR - Error extracting data point- 'Emails' from the resume- batch_parsing\CPg6CyrPNDS4EkC8oyouso\Will-McKinley_ZaDvJfjWk43urra3s3dAFf.pdf.pdf
+Traceback (most recent call last):
+  File "c:\Users\Mohit Khanwale\Desktop\SplitReq\SplitReq-Parser\resume_parser.py", line 207, in extractDataPoints
+    emails = extractEmail(text, hyperlinks)
+  File "c:\Users\Mohit Khanwale\Desktop\SplitReq\SplitReq-Parser\resume_parser.py", line 147, in extractEmail
+    emails = list(set([e.lower() for e in emails]))
+  File "c:\Users\Mohit Khanwale\Desktop\SplitReq\SplitReq-Parser\resume_parser.py", line 147, in <listcomp>
+    emails = list(set([e.lower() for e in emails]))
+AttributeError: 'NoneType' object has no attribute 'lower'
+2021-05-05 05:59:09,102 - werkzeug - INFO - 127.0.0.1 - - [05/May/2021 05:59:09] "[37mPOST /api/v1/cvparser/batch HTTP/1.1[0m" 200 -
+2021-05-05 06:06:05,428 - resume_parser - ERROR - Error extracting data point- 'Emails' from the resume- batch_parsing\QFa9Mf9aXYJJxcvmkMGKki\Will-McKinley_4QCVpubzJMuEGne9bdxXez.pdf.pdf
+Traceback (most recent call last):
+  File "c:\Users\Mohit Khanwale\Desktop\SplitReq\SplitReq-Parser\resume_parser.py", line 207, in extractDataPoints
+    except Exception:
+  File "c:\Users\Mohit Khanwale\Desktop\SplitReq\SplitReq-Parser\resume_parser.py", line 147, in extractEmail
+    return emails
+  File "c:\Users\Mohit Khanwale\Desktop\SplitReq\SplitReq-Parser\resume_parser.py", line 147, in <listcomp>
+    return emails
+AttributeError: 'NoneType' object has no attribute 'lower'
+2021-05-05 06:06:05,448 - werkzeug - INFO - 127.0.0.1 - - [05/May/2021 06:06:05] "[37mPOST /api/v1/cvparser/batch HTTP/1.1[0m" 200 -
+2021-05-05 06:12:35,935 - werkzeug - INFO - 6720 -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-05-05 06:12:41,849 - werkzeug - INFO - 6720 - 127.0.0.1 - - [05/May/2021 06:12:41] "[33mGET / HTTP/1.1[0m" 404 -
+2021-05-05 06:12:53,793 - flask_app - ERROR - 6720 - Exception on /debug-sentry [GET]
+Traceback (most recent call last):
+  File "c:\Users\Mohit Khanwale\Desktop\SplitReq\SplitReq-Parser\prodenv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\Users\Mohit Khanwale\Desktop\SplitReq\SplitReq-Parser\prodenv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\Users\Mohit Khanwale\Desktop\SplitReq\SplitReq-Parser\prodenv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\Users\Mohit Khanwale\Desktop\SplitReq\SplitReq-Parser\prodenv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\Users\Mohit Khanwale\Desktop\SplitReq\SplitReq-Parser\prodenv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\Users\Mohit Khanwale\Desktop\SplitReq\SplitReq-Parser\prodenv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\Users\Mohit Khanwale\Desktop\SplitReq\SplitReq-Parser\flask_app.py", line 137, in trigger_error
+    division_by_zero = 1 / 0
+ZeroDivisionError: division by zero
+2021-05-05 06:12:53,802 - werkzeug - INFO - 6720 - 127.0.0.1 - - [05/May/2021 06:12:53] "[35m[1mGET /debug-sentry HTTP/1.1[0m" 500 -
+2021-06-24 23:42:59,388 - werkzeug - INFO - 9476 -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-24 23:43:24,952 - werkzeug - INFO - 9476 - 127.0.0.1 - - [24/Jun/2021 23:43:24] "[37mPOST /api/v1/cvparser/single HTTP/1.1[0m" 200 -
+2021-06-24 23:44:16,233 - flask_app - ERROR - 9476 - Exception on /api/v1/cvparser/single [POST]
+Traceback (most recent call last):
+  File "c:\Users\Mohit Khanwale\Desktop\SplitReq\SplitReq-Parser\prodenv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\Users\Mohit Khanwale\Desktop\SplitReq\SplitReq-Parser\prodenv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\Users\Mohit Khanwale\Desktop\SplitReq\SplitReq-Parser\prodenv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\Users\Mohit Khanwale\Desktop\SplitReq\SplitReq-Parser\prodenv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\Users\Mohit Khanwale\Desktop\SplitReq\SplitReq-Parser\prodenv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\Users\Mohit Khanwale\Desktop\SplitReq\SplitReq-Parser\prodenv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\Users\Mohit Khanwale\Desktop\SplitReq\SplitReq-Parser\flask_app.py", line 166, in parseResume
+    b64str = payload["ResumeAsBase64String"]
+TypeError: string indices must be integers
+2021-06-24 23:44:16,242 - werkzeug - INFO - 9476 - 127.0.0.1 - - [24/Jun/2021 23:44:16] "[35m[1mPOST /api/v1/cvparser/single HTTP/1.1[0m" 500 -
+2021-06-24 23:45:35,384 - flask_app - ERROR - 9476 - Exception on /api/v1/cvparser/single [POST]
+Traceback (most recent call last):
+  File "c:\Users\Mohit Khanwale\Desktop\SplitReq\SplitReq-Parser\prodenv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\Users\Mohit Khanwale\Desktop\SplitReq\SplitReq-Parser\prodenv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\Users\Mohit Khanwale\Desktop\SplitReq\SplitReq-Parser\prodenv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\Users\Mohit Khanwale\Desktop\SplitReq\SplitReq-Parser\prodenv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\Users\Mohit Khanwale\Desktop\SplitReq\SplitReq-Parser\prodenv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\Users\Mohit Khanwale\Desktop\SplitReq\SplitReq-Parser\prodenv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\Users\Mohit Khanwale\Desktop\SplitReq\SplitReq-Parser\flask_app.py", line 166, in parseResume
+    b64str = payload["ResumeAsBase64String"]
+TypeError: string indices must be integers
+2021-06-24 23:45:35,391 - werkzeug - INFO - 9476 - 127.0.0.1 - - [24/Jun/2021 23:45:35] "[35m[1mPOST /api/v1/cvparser/single HTTP/1.1[0m" 500 -
+2021-06-24 23:46:04,169 - flask_app - ERROR - 9476 - Exception on /api/v1/cvparser/single [POST]
+Traceback (most recent call last):
+  File "c:\Users\Mohit Khanwale\Desktop\SplitReq\SplitReq-Parser\prodenv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\Users\Mohit Khanwale\Desktop\SplitReq\SplitReq-Parser\prodenv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\Users\Mohit Khanwale\Desktop\SplitReq\SplitReq-Parser\prodenv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\Users\Mohit Khanwale\Desktop\SplitReq\SplitReq-Parser\prodenv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\Users\Mohit Khanwale\Desktop\SplitReq\SplitReq-Parser\prodenv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\Users\Mohit Khanwale\Desktop\SplitReq\SplitReq-Parser\prodenv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\Users\Mohit Khanwale\Desktop\SplitReq\SplitReq-Parser\flask_app.py", line 166, in parseResume
+    b64str = payload["ResumeAsBase64String"]
+TypeError: string indices must be integers
+2021-06-24 23:46:04,178 - werkzeug - INFO - 9476 - 127.0.0.1 - - [24/Jun/2021 23:46:04] "[35m[1mPOST /api/v1/cvparser/single HTTP/1.1[0m" 500 -
+2021-06-24 23:48:51,810 - werkzeug - INFO - 9476 - 127.0.0.1 - - [24/Jun/2021 23:48:51] "[37mPOST /api/v1/cvparser/single HTTP/1.1[0m" 200 -
+2021-06-24 23:50:09,803 - werkzeug - INFO - 9476 - 127.0.0.1 - - [24/Jun/2021 23:50:09] "[37mPOST /api/v1/cvparser/single HTTP/1.1[0m" 200 -
+2021-06-24 23:59:14,934 - werkzeug - INFO - 25104 -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-06-25 00:00:33,473 - resume_parser - CRITICAL - 25104 - Error converting given Doc or Docx file into Text- batch_parsing\mTo5bcVvkLXeuH8kynpcB7\Aazim Lalani_QCCKNHGnqobbULugKetvf9.doc
+Traceback (most recent call last):
+  File "c:\Users\Mohit Khanwale\Desktop\SplitReq\SplitReq-Parser\prodenv\lib\site-packages\textract\parsers\utils.py", line 82, in run
+    pipe = subprocess.Popen(
+  File "c:\Users\Mohit Khanwale\Desktop\SplitReq\SplitReq-Parser\prodenv\lib\site-packages\sentry_sdk\integrations\stdlib.py", line 193, in sentry_patched_popen_init
+    rv = old_popen_init(self, *a, **kw)  # type: ignore
+  File "C:\anaconda3\lib\subprocess.py", line 854, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "C:\anaconda3\lib\subprocess.py", line 1307, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\Mohit Khanwale\Desktop\SplitReq\SplitReq-Parser\resume_parser.py", line 26, in extractText
+    txt = wordToText(path)
+  File "c:\Users\Mohit Khanwale\Desktop\SplitReq\SplitReq-Parser\docx_doc_to_text.py", line 5, in wordToText
+    text = textract.process(path)
+  File "c:\Users\Mohit Khanwale\Desktop\SplitReq\SplitReq-Parser\prodenv\lib\site-packages\textract\parsers\__init__.py", line 77, in process
+    return parser.process(filename, encoding, **kwargs)
+  File "c:\Users\Mohit Khanwale\Desktop\SplitReq\SplitReq-Parser\prodenv\lib\site-packages\textract\parsers\utils.py", line 46, in process
+    byte_string = self.extract(filename, **kwargs)
+  File "c:\Users\Mohit Khanwale\Desktop\SplitReq\SplitReq-Parser\prodenv\lib\site-packages\textract\parsers\doc_parser.py", line 9, in extract
+    stdout, stderr = self.run(['antiword', filename])
+  File "c:\Users\Mohit Khanwale\Desktop\SplitReq\SplitReq-Parser\prodenv\lib\site-packages\textract\parsers\utils.py", line 91, in run
+    ' '.join(args), 127, '', '',
+TypeError: sequence item 1: expected str instance, WindowsPath found
+2021-06-25 00:00:33,494 - resume_parser - ERROR - 25104 - Error extracting text from the resume- batch_parsing\mTo5bcVvkLXeuH8kynpcB7\Aazim Lalani_QCCKNHGnqobbULugKetvf9.doc
+Traceback (most recent call last):
+  File "c:\Users\Mohit Khanwale\Desktop\SplitReq\SplitReq-Parser\resume_parser.py", line 170, in extractDataPoints
+    raise Exception
+Exception
+2021-06-25 00:00:33,497 - batch_parsing - ERROR - 25104 - Error in batch parser while parsing resume- Aazim Lalani.doc
+Traceback (most recent call last):
+  File "c:\Users\Mohit Khanwale\Desktop\SplitReq\SplitReq-Parser\batch_parsing.py", line 44, in parseUnzippedResumes
+    raise Exception
+Exception
+2021-06-25 00:00:34,000 - werkzeug - INFO - 25104 - 127.0.0.1 - - [25/Jun/2021 00:00:34] "[37mPOST /api/v1/cvparser/batch HTTP/1.1[0m" 200 -
+2021-06-25 00:01:26,737 - resume_parser - CRITICAL - 25104 - Error converting given Doc or Docx file into Text- batch_parsing\M4UoDUhCUp6EwjTbtDoaiM\Aazim Lalani_kJgyfrFnp4UzwrSndHx4dE.doc
+Traceback (most recent call last):
+  File "c:\Users\Mohit Khanwale\Desktop\SplitReq\SplitReq-Parser\prodenv\lib\site-packages\textract\parsers\utils.py", line 82, in run
+    pipe = subprocess.Popen(
+  File "c:\Users\Mohit Khanwale\Desktop\SplitReq\SplitReq-Parser\prodenv\lib\site-packages\sentry_sdk\integrations\stdlib.py", line 193, in sentry_patched_popen_init
+    rv = old_popen_init(self, *a, **kw)  # type: ignore
+  File "C:\anaconda3\lib\subprocess.py", line 854, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "C:\anaconda3\lib\subprocess.py", line 1307, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\Mohit Khanwale\Desktop\SplitReq\SplitReq-Parser\resume_parser.py", line 26, in extractText
+    txt = wordToText(path)
+  File "c:\Users\Mohit Khanwale\Desktop\SplitReq\SplitReq-Parser\docx_doc_to_text.py", line 5, in wordToText
+    text = textract.process(path)
+  File "c:\Users\Mohit Khanwale\Desktop\SplitReq\SplitReq-Parser\prodenv\lib\site-packages\textract\parsers\__init__.py", line 77, in process
+    return parser.process(filename, encoding, **kwargs)
+  File "c:\Users\Mohit Khanwale\Desktop\SplitReq\SplitReq-Parser\prodenv\lib\site-packages\textract\parsers\utils.py", line 46, in process
+    byte_string = self.extract(filename, **kwargs)
+  File "c:\Users\Mohit Khanwale\Desktop\SplitReq\SplitReq-Parser\prodenv\lib\site-packages\textract\parsers\doc_parser.py", line 9, in extract
+    stdout, stderr = self.run(['antiword', filename])
+  File "c:\Users\Mohit Khanwale\Desktop\SplitReq\SplitReq-Parser\prodenv\lib\site-packages\textract\parsers\utils.py", line 91, in run
+    ' '.join(args), 127, '', '',
+TypeError: sequence item 1: expected str instance, WindowsPath found
+2021-06-25 00:01:26,749 - resume_parser - ERROR - 25104 - Error extracting text from the resume- batch_parsing\M4UoDUhCUp6EwjTbtDoaiM\Aazim Lalani_kJgyfrFnp4UzwrSndHx4dE.doc
+Traceback (most recent call last):
+  File "c:\Users\Mohit Khanwale\Desktop\SplitReq\SplitReq-Parser\resume_parser.py", line 170, in extractDataPoints
+    raise Exception
+Exception
+2021-06-25 00:01:26,751 - batch_parsing - ERROR - 25104 - Error in batch parser while parsing resume- Aazim Lalani.doc
+Traceback (most recent call last):
+  File "c:\Users\Mohit Khanwale\Desktop\SplitReq\SplitReq-Parser\batch_parsing.py", line 44, in parseUnzippedResumes
+    raise Exception
+Exception
+2021-06-25 00:01:27,141 - werkzeug - INFO - 25104 - 127.0.0.1 - - [25/Jun/2021 00:01:27] "[37mPOST /api/v1/cvparser/batch HTTP/1.1[0m" 200 -
+2021-08-09 05:42:43,018 - werkzeug - INFO - 561 -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-08-09 05:42:48,753 - werkzeug - INFO - 561 - 127.0.0.1 - - [09/Aug/2021 05:42:48] "[33mGET / HTTP/1.1[0m" 404 -
+2021-08-09 05:42:48,973 - werkzeug - INFO - 561 - 127.0.0.1 - - [09/Aug/2021 05:42:48] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021-08-09 05:43:11,019 - werkzeug - INFO - 561 - 127.0.0.1 - - [09/Aug/2021 05:43:11] "[31m[1mGET /api/v1/cvparser/batch HTTP/1.1[0m" 405 -
+2021-08-09 05:56:55,206 - werkzeug - INFO - 561 - 127.0.0.1 - - [09/Aug/2021 05:56:55] "[37mPOST /api/v1/cvparser/single HTTP/1.1[0m" 200 -
+2021-08-09 06:09:23,617 - werkzeug - INFO - 561 - 127.0.0.1 - - [09/Aug/2021 06:09:23] "[37mPOST /api/v1/cvparser/single HTTP/1.1[0m" 200 -
+2021-08-09 06:17:42,947 - werkzeug - INFO - 561 - 127.0.0.1 - - [09/Aug/2021 06:17:42] "[37mPOST /api/v1/cvparser/single HTTP/1.1[0m" 200 -
+2021-08-23 07:05:23,299 - werkzeug - INFO - 3023 -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-08-23 07:05:56,372 - werkzeug - INFO - 3023 - 127.0.0.1 - - [23/Aug/2021 07:05:56] "[37mPOST /api/v1/cvparser/single HTTP/1.1[0m" 200 -
+2021-08-23 07:08:19,706 - flask_app - ERROR - 3023 - Exception on /api/v1/cvparser/batch [POST]
+Traceback (most recent call last):
+  File "/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/linuxenv/lib/python3.8/site-packages/kombu/serialization.py", line 42, in _reraise_errors
+    yield
+  File "/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/linuxenv/lib/python3.8/site-packages/kombu/serialization.py", line 213, in dumps
+    payload = encoder(data)
+  File "/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/linuxenv/lib/python3.8/site-packages/kombu/utils/json.py", line 68, in dumps
+    return _dumps(s, cls=cls or _default_encoder,
+  File "/usr/lib/python3.8/json/__init__.py", line 234, in dumps
+    return cls(
+  File "/usr/lib/python3.8/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib/python3.8/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/linuxenv/lib/python3.8/site-packages/kombu/utils/json.py", line 58, in default
+    return super().default(o)
+  File "/usr/lib/python3.8/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type PurePosixPath is not JSON serializable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/linuxenv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/linuxenv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/linuxenv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/linuxenv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/linuxenv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/linuxenv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/flask_app.py", line 282, in batchResumeParsing
+    r = simple_app.send_task('batch_parsing.py.parseUnzippedResumes', kwargs={'path': unzip_path})
+  File "/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/linuxenv/lib/python3.8/site-packages/celery/app/base.py", line 767, in send_task
+    amqp.send_task_message(P, name, message, **options)
+  File "/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/linuxenv/lib/python3.8/site-packages/celery/app/amqp.py", line 510, in send_task_message
+    ret = producer.publish(
+  File "/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/linuxenv/lib/python3.8/site-packages/kombu/messaging.py", line 166, in publish
+    body, content_type, content_encoding = self._prepare(
+  File "/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/linuxenv/lib/python3.8/site-packages/kombu/messaging.py", line 254, in _prepare
+    body) = dumps(body, serializer=serializer)
+  File "/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/linuxenv/lib/python3.8/site-packages/kombu/serialization.py", line 213, in dumps
+    payload = encoder(data)
+  File "/usr/lib/python3.8/contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/linuxenv/lib/python3.8/site-packages/kombu/serialization.py", line 46, in _reraise_errors
+    reraise(wrapper, wrapper(exc), sys.exc_info()[2])
+  File "/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/linuxenv/lib/python3.8/site-packages/kombu/exceptions.py", line 21, in reraise
+    raise value.with_traceback(tb)
+  File "/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/linuxenv/lib/python3.8/site-packages/kombu/serialization.py", line 42, in _reraise_errors
+    yield
+  File "/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/linuxenv/lib/python3.8/site-packages/kombu/serialization.py", line 213, in dumps
+    payload = encoder(data)
+  File "/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/linuxenv/lib/python3.8/site-packages/kombu/utils/json.py", line 68, in dumps
+    return _dumps(s, cls=cls or _default_encoder,
+  File "/usr/lib/python3.8/json/__init__.py", line 234, in dumps
+    return cls(
+  File "/usr/lib/python3.8/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib/python3.8/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/linuxenv/lib/python3.8/site-packages/kombu/utils/json.py", line 58, in default
+    return super().default(o)
+  File "/usr/lib/python3.8/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+kombu.exceptions.EncodeError: Object of type PurePosixPath is not JSON serializable
+2021-08-23 07:08:19,748 - werkzeug - INFO - 3023 - 127.0.0.1 - - [23/Aug/2021 07:08:19] "[35m[1mPOST /api/v1/cvparser/batch HTTP/1.1[0m" 500 -
+2021-08-23 07:10:39,741 - flask_app - ERROR - 3023 - Exception on /api/v1/cvparser/batch [POST]
+Traceback (most recent call last):
+  File "/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/linuxenv/lib/python3.8/site-packages/kombu/serialization.py", line 42, in _reraise_errors
+    yield
+  File "/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/linuxenv/lib/python3.8/site-packages/kombu/serialization.py", line 213, in dumps
+    payload = encoder(data)
+  File "/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/linuxenv/lib/python3.8/site-packages/kombu/utils/json.py", line 68, in dumps
+    return _dumps(s, cls=cls or _default_encoder,
+  File "/usr/lib/python3.8/json/__init__.py", line 234, in dumps
+    return cls(
+  File "/usr/lib/python3.8/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib/python3.8/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/linuxenv/lib/python3.8/site-packages/kombu/utils/json.py", line 58, in default
+    return super().default(o)
+  File "/usr/lib/python3.8/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type PurePosixPath is not JSON serializable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/linuxenv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/linuxenv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/linuxenv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/linuxenv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/linuxenv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/linuxenv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/flask_app.py", line 282, in batchResumeParsing
+    r = simple_app.send_task('batch_parsing.py.parseUnzippedResumes', kwargs={'path': unzip_path})
+  File "/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/linuxenv/lib/python3.8/site-packages/celery/app/base.py", line 767, in send_task
+    amqp.send_task_message(P, name, message, **options)
+  File "/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/linuxenv/lib/python3.8/site-packages/celery/app/amqp.py", line 510, in send_task_message
+    ret = producer.publish(
+  File "/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/linuxenv/lib/python3.8/site-packages/kombu/messaging.py", line 166, in publish
+    body, content_type, content_encoding = self._prepare(
+  File "/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/linuxenv/lib/python3.8/site-packages/kombu/messaging.py", line 254, in _prepare
+    body) = dumps(body, serializer=serializer)
+  File "/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/linuxenv/lib/python3.8/site-packages/kombu/serialization.py", line 213, in dumps
+    payload = encoder(data)
+  File "/usr/lib/python3.8/contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/linuxenv/lib/python3.8/site-packages/kombu/serialization.py", line 46, in _reraise_errors
+    reraise(wrapper, wrapper(exc), sys.exc_info()[2])
+  File "/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/linuxenv/lib/python3.8/site-packages/kombu/exceptions.py", line 21, in reraise
+    raise value.with_traceback(tb)
+  File "/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/linuxenv/lib/python3.8/site-packages/kombu/serialization.py", line 42, in _reraise_errors
+    yield
+  File "/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/linuxenv/lib/python3.8/site-packages/kombu/serialization.py", line 213, in dumps
+    payload = encoder(data)
+  File "/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/linuxenv/lib/python3.8/site-packages/kombu/utils/json.py", line 68, in dumps
+    return _dumps(s, cls=cls or _default_encoder,
+  File "/usr/lib/python3.8/json/__init__.py", line 234, in dumps
+    return cls(
+  File "/usr/lib/python3.8/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib/python3.8/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/linuxenv/lib/python3.8/site-packages/kombu/utils/json.py", line 58, in default
+    return super().default(o)
+  File "/usr/lib/python3.8/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+kombu.exceptions.EncodeError: Object of type PurePosixPath is not JSON serializable
+2021-08-23 07:10:39,752 - werkzeug - INFO - 3023 - 127.0.0.1 - - [23/Aug/2021 07:10:39] "[35m[1mPOST /api/v1/cvparser/batch HTTP/1.1[0m" 500 -
+2021-08-23 07:11:45,194 - werkzeug - INFO - 3635 -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-08-23 07:11:45,202 - werkzeug - INFO - 3635 -  * Restarting with stat
+2021-08-23 07:11:51,086 - werkzeug - WARNING - 3682 -  * Debugger is active!
+2021-08-23 07:11:51,087 - werkzeug - INFO - 3682 -  * Debugger PIN: 434-809-796
+2021-08-23 07:12:06,689 - werkzeug - INFO - 3682 - 127.0.0.1 - - [23/Aug/2021 07:12:06] "[35m[1mPOST /api/v1/cvparser/batch HTTP/1.1[0m" 500 -
+2021-08-23 07:13:18,316 - werkzeug - INFO - 3682 - 127.0.0.1 - - [23/Aug/2021 07:13:18] "[35m[1mPOST /api/v1/cvparser/batch HTTP/1.1[0m" 500 -
+2021-08-23 07:15:19,105 - werkzeug - INFO - 3682 -  * Detected change in '/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/flask_app.py', reloading
+2021-08-23 07:15:19,202 - werkzeug - INFO - 3635 -  * Restarting with stat
+2021-08-23 07:15:24,916 - werkzeug - WARNING - 3942 -  * Debugger is active!
+2021-08-23 07:15:24,917 - werkzeug - INFO - 3942 -  * Debugger PIN: 434-809-796
+2021-08-23 07:15:33,965 - werkzeug - INFO - 3942 - 127.0.0.1 - - [23/Aug/2021 07:15:33] "[35m[1mPOST /api/v1/cvparser/batch HTTP/1.1[0m" 500 -
+2021-08-23 07:15:55,918 - werkzeug - INFO - 4070 -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-08-23 07:15:55,925 - werkzeug - INFO - 4070 -  * Restarting with stat
+2021-08-23 07:16:00,928 - werkzeug - WARNING - 4115 -  * Debugger is active!
+2021-08-23 07:16:00,928 - werkzeug - INFO - 4115 -  * Debugger PIN: 434-809-796
+2021-08-23 07:16:02,110 - flask_app - INFO - 4115 - <celery.backends.redis.RedisBackend object at 0x7fd7601228e0>
+2021-08-23 07:16:02,111 - werkzeug - INFO - 4115 - 127.0.0.1 - - [23/Aug/2021 07:16:02] "[37mPOST /api/v1/cvparser/batch HTTP/1.1[0m" 200 -
+2021-08-23 07:17:46,193 - werkzeug - INFO - 4115 - 127.0.0.1 - - [23/Aug/2021 07:17:46] "[37mGET /api/v1/cvparser/batch/task_status/020fc289-3861-41ff-a8ae-ff0db2a5b6a1 HTTP/1.1[0m" 200 -
+2021-08-23 07:19:14,542 - werkzeug - INFO - 4115 -  * Detected change in '/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/batch_parsing.py', reloading
+2021-08-23 07:19:14,646 - werkzeug - INFO - 4070 -  * Restarting with stat
+2021-08-23 07:20:11,652 - werkzeug - INFO - 4706 -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-08-23 07:20:11,658 - werkzeug - INFO - 4706 -  * Restarting with stat
+2021-08-23 07:20:17,150 - werkzeug - WARNING - 4735 -  * Debugger is active!
+2021-08-23 07:20:17,151 - werkzeug - INFO - 4735 -  * Debugger PIN: 434-809-796
+2021-08-23 07:20:18,330 - flask_app - INFO - 4735 - <celery.backends.redis.RedisBackend object at 0x7fe22bcef910>
+2021-08-23 07:20:18,331 - werkzeug - INFO - 4735 - 127.0.0.1 - - [23/Aug/2021 07:20:18] "[37mPOST /api/v1/cvparser/batch HTTP/1.1[0m" 200 -
+2021-08-23 07:20:25,102 - werkzeug - INFO - 4735 - 127.0.0.1 - - [23/Aug/2021 07:20:25] "[37mGET /api/v1/cvparser/batch/task_status/aab38014-2ad4-4f1f-a4e0-17b770432531 HTTP/1.1[0m" 200 -
+2021-08-23 07:20:26,486 - werkzeug - INFO - 4735 - 127.0.0.1 - - [23/Aug/2021 07:20:26] "[37mGET /api/v1/cvparser/batch/task_status/aab38014-2ad4-4f1f-a4e0-17b770432531 HTTP/1.1[0m" 200 -
+2021-08-23 07:21:29,163 - werkzeug - INFO - 4735 -  * Detected change in '/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/flask_app.py', reloading
+2021-08-23 07:21:29,279 - werkzeug - INFO - 4706 -  * Restarting with stat
+2021-08-23 07:21:35,110 - werkzeug - WARNING - 4937 -  * Debugger is active!
+2021-08-23 07:21:35,111 - werkzeug - INFO - 4937 -  * Debugger PIN: 434-809-796
+2021-08-23 07:21:40,707 - flask_app - INFO - 4937 - <celery.backends.redis.RedisBackend object at 0x7f3af51e1970>
+2021-08-23 07:21:40,708 - werkzeug - INFO - 4937 - 127.0.0.1 - - [23/Aug/2021 07:21:40] "[37mPOST /api/v1/cvparser/batch HTTP/1.1[0m" 200 -
+2021-08-23 07:21:56,634 - werkzeug - INFO - 4937 - 127.0.0.1 - - [23/Aug/2021 07:21:56] "[37mGET /api/v1/cvparser/batch/task_status/12818d64-47c8-44c7-846b-8da0a1a17fef HTTP/1.1[0m" 200 -
+2021-08-23 07:22:20,037 - werkzeug - INFO - 4937 - 127.0.0.1 - - [23/Aug/2021 07:22:20] "[37mGET /api/v1/cvparser/batch/task_result/12818d64-47c8-44c7-846b-8da0a1a17fef HTTP/1.1[0m" 200 -
+2021-08-23 07:24:05,637 - werkzeug - INFO - 4937 -  * Detected change in '/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/flask_app.py', reloading
+2021-08-23 07:24:05,744 - werkzeug - INFO - 4706 -  * Restarting with stat
+2021-08-23 07:24:53,582 - werkzeug - INFO - 5316 -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-08-23 07:24:53,588 - werkzeug - INFO - 5316 -  * Restarting with stat
+2021-08-23 07:24:59,104 - werkzeug - WARNING - 5367 -  * Debugger is active!
+2021-08-23 07:24:59,105 - werkzeug - INFO - 5367 -  * Debugger PIN: 434-809-796
+2021-08-23 07:25:00,964 - flask_app - INFO - 5367 - <celery.backends.redis.RedisBackend object at 0x7f346be59970>
+2021-08-23 07:25:00,965 - werkzeug - INFO - 5367 - 127.0.0.1 - - [23/Aug/2021 07:25:00] "[37mPOST /api/v1/cvparser/batch HTTP/1.1[0m" 200 -
+2021-08-23 07:25:13,503 - werkzeug - INFO - 5367 - 127.0.0.1 - - [23/Aug/2021 07:25:13] "[37mGET /api/v1/cvparser/batch/task_status/982f9400-03c2-4ba0-bc93-8a13c18a6dcf HTTP/1.1[0m" 200 -
+2021-08-23 07:25:44,154 - werkzeug - INFO - 5367 -  * Detected change in '/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/batch_parsing.py', reloading
+2021-08-23 07:25:44,262 - werkzeug - INFO - 5316 -  * Restarting with stat
+2021-08-23 07:25:49,993 - werkzeug - WARNING - 5613 -  * Debugger is active!
+2021-08-23 07:25:49,994 - werkzeug - INFO - 5613 -  * Debugger PIN: 434-809-796
+2021-08-23 07:25:55,466 - flask_app - INFO - 5613 - <celery.backends.redis.RedisBackend object at 0x7f3f61b539a0>
+2021-08-23 07:25:55,467 - werkzeug - INFO - 5613 - 127.0.0.1 - - [23/Aug/2021 07:25:55] "[37mPOST /api/v1/cvparser/batch HTTP/1.1[0m" 200 -
+2021-08-23 07:26:02,012 - werkzeug - INFO - 5613 - 127.0.0.1 - - [23/Aug/2021 07:26:02] "[37mGET /api/v1/cvparser/batch/task_status/6f0efb35-0171-4cbe-90ce-ed30f79ebbc6 HTTP/1.1[0m" 200 -
+2021-08-23 07:26:03,501 - werkzeug - INFO - 5613 - 127.0.0.1 - - [23/Aug/2021 07:26:03] "[37mGET /api/v1/cvparser/batch/task_status/6f0efb35-0171-4cbe-90ce-ed30f79ebbc6 HTTP/1.1[0m" 200 -
+2021-08-23 07:27:25,468 - werkzeug - INFO - 6031 -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-08-23 07:27:25,474 - werkzeug - INFO - 6031 -  * Restarting with stat
+2021-08-23 07:27:30,864 - werkzeug - WARNING - 6083 -  * Debugger is active!
+2021-08-23 07:27:30,864 - werkzeug - INFO - 6083 -  * Debugger PIN: 434-809-796
+2021-08-23 07:27:32,051 - flask_app - INFO - 6083 - <celery.backends.redis.RedisBackend object at 0x7f8ccee83970>
+2021-08-23 07:27:32,052 - werkzeug - INFO - 6083 - 127.0.0.1 - - [23/Aug/2021 07:27:32] "[37mPOST /api/v1/cvparser/batch HTTP/1.1[0m" 200 -
+2021-08-23 07:27:39,001 - werkzeug - INFO - 6083 - 127.0.0.1 - - [23/Aug/2021 07:27:39] "[37mGET /api/v1/cvparser/batch/task_status/0ee7f5c5-592d-4be1-b1db-4007ad686b07 HTTP/1.1[0m" 200 -
+2021-08-23 07:27:40,449 - werkzeug - INFO - 6083 - 127.0.0.1 - - [23/Aug/2021 07:27:40] "[37mGET /api/v1/cvparser/batch/task_status/0ee7f5c5-592d-4be1-b1db-4007ad686b07 HTTP/1.1[0m" 200 -
+2021-08-23 07:31:37,135 - werkzeug - INFO - 6083 -  * Detected change in '/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/flask_app.py', reloading
+2021-08-23 07:31:37,233 - werkzeug - INFO - 6031 -  * Restarting with stat
+2021-08-23 07:31:42,822 - werkzeug - WARNING - 6509 -  * Debugger is active!
+2021-08-23 07:31:42,822 - werkzeug - INFO - 6509 -  * Debugger PIN: 434-809-796
+2021-08-23 07:31:44,487 - flask_app - INFO - 6509 - <celery.backends.redis.RedisBackend object at 0x7f8ed8902970>
+2021-08-23 07:31:44,488 - werkzeug - INFO - 6509 - 127.0.0.1 - - [23/Aug/2021 07:31:44] "[37mPOST /api/v1/cvparser/batch HTTP/1.1[0m" 200 -
+2021-08-23 07:31:52,141 - werkzeug - INFO - 6509 - 127.0.0.1 - - [23/Aug/2021 07:31:52] "[37mGET /api/v1/cvparser/batch/task_status/1b47f2aa-47c5-4055-b110-cd0cf1a4fd0d HTTP/1.1[0m" 200 -
+2021-08-23 07:31:54,400 - werkzeug - INFO - 6509 - 127.0.0.1 - - [23/Aug/2021 07:31:54] "[37mGET /api/v1/cvparser/batch/task_status/1b47f2aa-47c5-4055-b110-cd0cf1a4fd0d HTTP/1.1[0m" 200 -
+2021-08-23 07:32:51,902 - werkzeug - INFO - 6509 -  * Detected change in '/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/flask_app.py', reloading
+2021-08-23 07:32:51,995 - werkzeug - INFO - 6031 -  * Restarting with stat
+2021-08-23 07:32:57,381 - werkzeug - WARNING - 6801 -  * Debugger is active!
+2021-08-23 07:32:57,382 - werkzeug - INFO - 6801 -  * Debugger PIN: 434-809-796
+2021-08-23 07:33:31,895 - werkzeug - INFO - 6801 -  * Detected change in '/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/flask_app.py', reloading
+2021-08-23 07:33:31,988 - werkzeug - INFO - 6031 -  * Restarting with stat
+2021-08-23 07:33:37,622 - werkzeug - WARNING - 6876 -  * Debugger is active!
+2021-08-23 07:33:37,623 - werkzeug - INFO - 6876 -  * Debugger PIN: 434-809-796
+2021-08-23 07:33:40,119 - flask_app - INFO - 6876 - <celery.backends.redis.RedisBackend object at 0x7fa60bdde850>
+2021-08-23 07:33:40,120 - werkzeug - INFO - 6876 - 127.0.0.1 - - [23/Aug/2021 07:33:40] "[37mPOST /api/v1/cvparser/batch HTTP/1.1[0m" 200 -
+2021-08-23 07:33:45,844 - werkzeug - INFO - 6876 - 127.0.0.1 - - [23/Aug/2021 07:33:45] "[37mGET /api/v1/cvparser/batch/task_status/98a12608-a926-4ba4-99fc-64cb6dadcfa4 HTTP/1.1[0m" 200 -
+2021-08-23 07:33:46,741 - werkzeug - INFO - 6876 - 127.0.0.1 - - [23/Aug/2021 07:33:46] "[37mGET /api/v1/cvparser/batch/task_status/98a12608-a926-4ba4-99fc-64cb6dadcfa4 HTTP/1.1[0m" 200 -
+2021-08-23 07:33:47,374 - werkzeug - INFO - 6876 - 127.0.0.1 - - [23/Aug/2021 07:33:47] "[37mGET /api/v1/cvparser/batch/task_status/98a12608-a926-4ba4-99fc-64cb6dadcfa4 HTTP/1.1[0m" 200 -
+2021-08-23 07:33:47,932 - werkzeug - INFO - 6876 - 127.0.0.1 - - [23/Aug/2021 07:33:47] "[37mGET /api/v1/cvparser/batch/task_status/98a12608-a926-4ba4-99fc-64cb6dadcfa4 HTTP/1.1[0m" 200 -
+2021-08-23 07:33:48,531 - werkzeug - INFO - 6876 - 127.0.0.1 - - [23/Aug/2021 07:33:48] "[37mGET /api/v1/cvparser/batch/task_status/98a12608-a926-4ba4-99fc-64cb6dadcfa4 HTTP/1.1[0m" 200 -
+2021-08-23 07:33:49,082 - werkzeug - INFO - 6876 - 127.0.0.1 - - [23/Aug/2021 07:33:49] "[37mGET /api/v1/cvparser/batch/task_status/98a12608-a926-4ba4-99fc-64cb6dadcfa4 HTTP/1.1[0m" 200 -
+2021-08-23 07:33:49,615 - werkzeug - INFO - 6876 - 127.0.0.1 - - [23/Aug/2021 07:33:49] "[37mGET /api/v1/cvparser/batch/task_status/98a12608-a926-4ba4-99fc-64cb6dadcfa4 HTTP/1.1[0m" 200 -
+2021-08-23 07:33:50,159 - werkzeug - INFO - 6876 - 127.0.0.1 - - [23/Aug/2021 07:33:50] "[37mGET /api/v1/cvparser/batch/task_status/98a12608-a926-4ba4-99fc-64cb6dadcfa4 HTTP/1.1[0m" 200 -
+2021-08-23 07:33:50,727 - werkzeug - INFO - 6876 - 127.0.0.1 - - [23/Aug/2021 07:33:50] "[37mGET /api/v1/cvparser/batch/task_status/98a12608-a926-4ba4-99fc-64cb6dadcfa4 HTTP/1.1[0m" 200 -
+2021-08-23 07:33:51,311 - werkzeug - INFO - 6876 - 127.0.0.1 - - [23/Aug/2021 07:33:51] "[37mGET /api/v1/cvparser/batch/task_status/98a12608-a926-4ba4-99fc-64cb6dadcfa4 HTTP/1.1[0m" 200 -
+2021-08-23 07:33:51,846 - werkzeug - INFO - 6876 - 127.0.0.1 - - [23/Aug/2021 07:33:51] "[37mGET /api/v1/cvparser/batch/task_status/98a12608-a926-4ba4-99fc-64cb6dadcfa4 HTTP/1.1[0m" 200 -
+2021-08-23 07:33:52,387 - werkzeug - INFO - 6876 - 127.0.0.1 - - [23/Aug/2021 07:33:52] "[37mGET /api/v1/cvparser/batch/task_status/98a12608-a926-4ba4-99fc-64cb6dadcfa4 HTTP/1.1[0m" 200 -
+2021-08-23 07:33:53,001 - werkzeug - INFO - 6876 - 127.0.0.1 - - [23/Aug/2021 07:33:53] "[37mGET /api/v1/cvparser/batch/task_status/98a12608-a926-4ba4-99fc-64cb6dadcfa4 HTTP/1.1[0m" 200 -
+2021-08-23 07:33:53,660 - werkzeug - INFO - 6876 - 127.0.0.1 - - [23/Aug/2021 07:33:53] "[37mGET /api/v1/cvparser/batch/task_status/98a12608-a926-4ba4-99fc-64cb6dadcfa4 HTTP/1.1[0m" 200 -
+2021-08-23 07:33:54,308 - werkzeug - INFO - 6876 - 127.0.0.1 - - [23/Aug/2021 07:33:54] "[37mGET /api/v1/cvparser/batch/task_status/98a12608-a926-4ba4-99fc-64cb6dadcfa4 HTTP/1.1[0m" 200 -
+2021-08-23 07:33:54,778 - werkzeug - INFO - 6876 - 127.0.0.1 - - [23/Aug/2021 07:33:54] "[37mGET /api/v1/cvparser/batch/task_status/98a12608-a926-4ba4-99fc-64cb6dadcfa4 HTTP/1.1[0m" 200 -
+2021-08-23 07:33:55,355 - werkzeug - INFO - 6876 - 127.0.0.1 - - [23/Aug/2021 07:33:55] "[37mGET /api/v1/cvparser/batch/task_status/98a12608-a926-4ba4-99fc-64cb6dadcfa4 HTTP/1.1[0m" 200 -
+2021-08-23 07:34:04,677 - werkzeug - INFO - 6876 - 127.0.0.1 - - [23/Aug/2021 07:34:04] "[37mGET /api/v1/cvparser/batch/task_status/98a12608-a926-4ba4-99fc-64cb6dadcfa4 HTTP/1.1[0m" 200 -
+2021-08-23 07:34:05,222 - werkzeug - INFO - 6876 - 127.0.0.1 - - [23/Aug/2021 07:34:05] "[37mGET /api/v1/cvparser/batch/task_status/98a12608-a926-4ba4-99fc-64cb6dadcfa4 HTTP/1.1[0m" 200 -
+2021-08-23 07:34:05,857 - werkzeug - INFO - 6876 - 127.0.0.1 - - [23/Aug/2021 07:34:05] "[37mGET /api/v1/cvparser/batch/task_status/98a12608-a926-4ba4-99fc-64cb6dadcfa4 HTTP/1.1[0m" 200 -
+2021-08-23 07:34:06,409 - werkzeug - INFO - 6876 - 127.0.0.1 - - [23/Aug/2021 07:34:06] "[37mGET /api/v1/cvparser/batch/task_status/98a12608-a926-4ba4-99fc-64cb6dadcfa4 HTTP/1.1[0m" 200 -
+2021-08-23 07:34:07,025 - werkzeug - INFO - 6876 - 127.0.0.1 - - [23/Aug/2021 07:34:07] "[37mGET /api/v1/cvparser/batch/task_status/98a12608-a926-4ba4-99fc-64cb6dadcfa4 HTTP/1.1[0m" 200 -
+2021-08-23 07:34:07,638 - werkzeug - INFO - 6876 - 127.0.0.1 - - [23/Aug/2021 07:34:07] "[37mGET /api/v1/cvparser/batch/task_status/98a12608-a926-4ba4-99fc-64cb6dadcfa4 HTTP/1.1[0m" 200 -
+2021-08-23 07:34:08,238 - werkzeug - INFO - 6876 - 127.0.0.1 - - [23/Aug/2021 07:34:08] "[37mGET /api/v1/cvparser/batch/task_status/98a12608-a926-4ba4-99fc-64cb6dadcfa4 HTTP/1.1[0m" 200 -
+2021-08-23 07:34:08,820 - werkzeug - INFO - 6876 - 127.0.0.1 - - [23/Aug/2021 07:34:08] "[37mGET /api/v1/cvparser/batch/task_status/98a12608-a926-4ba4-99fc-64cb6dadcfa4 HTTP/1.1[0m" 200 -
+2021-08-23 07:34:09,436 - werkzeug - INFO - 6876 - 127.0.0.1 - - [23/Aug/2021 07:34:09] "[37mGET /api/v1/cvparser/batch/task_status/98a12608-a926-4ba4-99fc-64cb6dadcfa4 HTTP/1.1[0m" 200 -
+2021-08-23 07:34:10,089 - werkzeug - INFO - 6876 - 127.0.0.1 - - [23/Aug/2021 07:34:10] "[37mGET /api/v1/cvparser/batch/task_status/98a12608-a926-4ba4-99fc-64cb6dadcfa4 HTTP/1.1[0m" 200 -
+2021-08-23 07:34:10,612 - werkzeug - INFO - 6876 - 127.0.0.1 - - [23/Aug/2021 07:34:10] "[37mGET /api/v1/cvparser/batch/task_status/98a12608-a926-4ba4-99fc-64cb6dadcfa4 HTTP/1.1[0m" 200 -
+2021-08-23 07:34:11,207 - werkzeug - INFO - 6876 - 127.0.0.1 - - [23/Aug/2021 07:34:11] "[37mGET /api/v1/cvparser/batch/task_status/98a12608-a926-4ba4-99fc-64cb6dadcfa4 HTTP/1.1[0m" 200 -
+2021-08-23 07:34:11,762 - werkzeug - INFO - 6876 - 127.0.0.1 - - [23/Aug/2021 07:34:11] "[37mGET /api/v1/cvparser/batch/task_status/98a12608-a926-4ba4-99fc-64cb6dadcfa4 HTTP/1.1[0m" 200 -
+2021-08-23 07:34:12,394 - werkzeug - INFO - 6876 - 127.0.0.1 - - [23/Aug/2021 07:34:12] "[37mGET /api/v1/cvparser/batch/task_status/98a12608-a926-4ba4-99fc-64cb6dadcfa4 HTTP/1.1[0m" 200 -
+2021-08-23 07:34:12,982 - werkzeug - INFO - 6876 - 127.0.0.1 - - [23/Aug/2021 07:34:12] "[37mGET /api/v1/cvparser/batch/task_status/98a12608-a926-4ba4-99fc-64cb6dadcfa4 HTTP/1.1[0m" 200 -
+2021-08-23 07:34:13,448 - werkzeug - INFO - 6876 - 127.0.0.1 - - [23/Aug/2021 07:34:13] "[37mGET /api/v1/cvparser/batch/task_status/98a12608-a926-4ba4-99fc-64cb6dadcfa4 HTTP/1.1[0m" 200 -
+2021-08-23 07:34:14,025 - werkzeug - INFO - 6876 - 127.0.0.1 - - [23/Aug/2021 07:34:14] "[37mGET /api/v1/cvparser/batch/task_status/98a12608-a926-4ba4-99fc-64cb6dadcfa4 HTTP/1.1[0m" 200 -
+2021-08-23 07:34:14,574 - werkzeug - INFO - 6876 - 127.0.0.1 - - [23/Aug/2021 07:34:14] "[37mGET /api/v1/cvparser/batch/task_status/98a12608-a926-4ba4-99fc-64cb6dadcfa4 HTTP/1.1[0m" 200 -
+2021-08-23 07:35:15,032 - werkzeug - INFO - 6876 - 127.0.0.1 - - [23/Aug/2021 07:35:15] "[37mGET /api/v1/cvparser/batch/task_status/98a12608-a926-4ba4-99fc-64cb6dadcfa4 HTTP/1.1[0m" 200 -
+2021-08-23 07:35:15,735 - werkzeug - INFO - 6876 - 127.0.0.1 - - [23/Aug/2021 07:35:15] "[37mGET /api/v1/cvparser/batch/task_status/98a12608-a926-4ba4-99fc-64cb6dadcfa4 HTTP/1.1[0m" 200 -
+2021-08-23 07:35:16,279 - werkzeug - INFO - 6876 - 127.0.0.1 - - [23/Aug/2021 07:35:16] "[37mGET /api/v1/cvparser/batch/task_status/98a12608-a926-4ba4-99fc-64cb6dadcfa4 HTTP/1.1[0m" 200 -
+2021-08-23 07:36:02,853 - werkzeug - INFO - 6876 - 127.0.0.1 - - [23/Aug/2021 07:36:02] "[37mGET /api/v1/cvparser/batch/task_status/98a12608-a926-4ba4-99fc-64cb6dadcfa4 HTTP/1.1[0m" 200 -
+2021-08-23 07:41:45,757 - werkzeug - INFO - 7546 -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-08-23 07:41:45,763 - werkzeug - INFO - 7546 -  * Restarting with stat
+2021-08-23 07:41:50,912 - werkzeug - WARNING - 7585 -  * Debugger is active!
+2021-08-23 07:41:50,912 - werkzeug - INFO - 7585 -  * Debugger PIN: 434-809-796
+2021-08-23 07:42:01,959 - flask_app - INFO - 7585 - <celery.backends.redis.RedisBackend object at 0x7f9aea10c3a0>
+2021-08-23 07:42:01,971 - werkzeug - INFO - 7585 - 127.0.0.1 - - [23/Aug/2021 07:42:01] "[37mPOST /api/v1/cvparser/batch HTTP/1.1[0m" 200 -
+2021-08-23 07:42:22,708 - werkzeug - INFO - 7585 - 127.0.0.1 - - [23/Aug/2021 07:42:22] "[37mGET /api/v1/cvparser/batch/task_status/cd511464-edfa-4098-9c82-e53d9841a29d HTTP/1.1[0m" 200 -
+2021-08-23 07:42:23,487 - werkzeug - INFO - 7585 - 127.0.0.1 - - [23/Aug/2021 07:42:23] "[37mGET /api/v1/cvparser/batch/task_status/cd511464-edfa-4098-9c82-e53d9841a29d HTTP/1.1[0m" 200 -
+2021-08-23 07:42:24,046 - werkzeug - INFO - 7585 - 127.0.0.1 - - [23/Aug/2021 07:42:24] "[37mGET /api/v1/cvparser/batch/task_status/cd511464-edfa-4098-9c82-e53d9841a29d HTTP/1.1[0m" 200 -
+2021-08-23 07:42:42,114 - werkzeug - INFO - 7585 -  * Detected change in '/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/flask_app.py', reloading
+2021-08-23 07:42:42,206 - werkzeug - INFO - 7546 -  * Restarting with stat
+2021-08-23 07:42:47,384 - werkzeug - WARNING - 7822 -  * Debugger is active!
+2021-08-23 07:42:47,385 - werkzeug - INFO - 7822 -  * Debugger PIN: 434-809-796
+2021-08-23 07:44:29,720 - werkzeug - INFO - 7822 - 127.0.0.1 - - [23/Aug/2021 07:44:29] "[37mGET /api/v1/cvparser/batch/task_status/cd511464-edfa-4098-9c82-e53d9841a29d HTTP/1.1[0m" 200 -
+2021-08-23 07:45:48,984 - werkzeug - INFO - 7822 -  * Detected change in '/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/flask_app.py', reloading
+2021-08-23 07:45:49,097 - werkzeug - INFO - 7546 -  * Restarting with stat
+2021-08-23 07:45:55,185 - werkzeug - WARNING - 8060 -  * Debugger is active!
+2021-08-23 07:45:55,186 - werkzeug - INFO - 8060 -  * Debugger PIN: 434-809-796
+2021-08-23 07:46:15,450 - werkzeug - INFO - 8192 -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-08-23 07:46:15,455 - werkzeug - INFO - 8192 -  * Restarting with stat
+2021-08-23 07:46:21,099 - werkzeug - WARNING - 8239 -  * Debugger is active!
+2021-08-23 07:46:21,100 - werkzeug - INFO - 8239 -  * Debugger PIN: 434-809-796
+2021-08-23 07:46:22,346 - flask_app - INFO - 8239 - <celery.backends.redis.RedisBackend object at 0x7f2f20eca370>
+2021-08-23 07:46:22,357 - werkzeug - INFO - 8239 - 127.0.0.1 - - [23/Aug/2021 07:46:22] "[37mPOST /api/v1/cvparser/batch HTTP/1.1[0m" 200 -
+2021-08-23 07:46:30,184 - werkzeug - INFO - 8239 - 127.0.0.1 - - [23/Aug/2021 07:46:30] "[37mGET /api/v1/cvparser/batch/task_status/1386043d-1edc-4e9b-8e00-6f81157a94f8 HTTP/1.1[0m" 200 -
+2021-08-23 07:46:31,931 - werkzeug - INFO - 8239 - 127.0.0.1 - - [23/Aug/2021 07:46:31] "[37mGET /api/v1/cvparser/batch/task_status/1386043d-1edc-4e9b-8e00-6f81157a94f8 HTTP/1.1[0m" 200 -
+2021-08-23 07:46:32,603 - werkzeug - INFO - 8239 - 127.0.0.1 - - [23/Aug/2021 07:46:32] "[37mGET /api/v1/cvparser/batch/task_status/1386043d-1edc-4e9b-8e00-6f81157a94f8 HTTP/1.1[0m" 200 -
+2021-08-23 07:46:33,105 - werkzeug - INFO - 8239 - 127.0.0.1 - - [23/Aug/2021 07:46:33] "[37mGET /api/v1/cvparser/batch/task_status/1386043d-1edc-4e9b-8e00-6f81157a94f8 HTTP/1.1[0m" 200 -
+2021-08-23 07:46:33,692 - werkzeug - INFO - 8239 - 127.0.0.1 - - [23/Aug/2021 07:46:33] "[37mGET /api/v1/cvparser/batch/task_status/1386043d-1edc-4e9b-8e00-6f81157a94f8 HTTP/1.1[0m" 200 -
+2021-08-23 07:46:34,117 - werkzeug - INFO - 8239 - 127.0.0.1 - - [23/Aug/2021 07:46:34] "[37mGET /api/v1/cvparser/batch/task_status/1386043d-1edc-4e9b-8e00-6f81157a94f8 HTTP/1.1[0m" 200 -
+2021-08-23 07:46:34,952 - werkzeug - INFO - 8239 - 127.0.0.1 - - [23/Aug/2021 07:46:34] "[37mGET /api/v1/cvparser/batch/task_status/1386043d-1edc-4e9b-8e00-6f81157a94f8 HTTP/1.1[0m" 200 -
+2021-08-23 07:46:35,409 - werkzeug - INFO - 8239 - 127.0.0.1 - - [23/Aug/2021 07:46:35] "[37mGET /api/v1/cvparser/batch/task_status/1386043d-1edc-4e9b-8e00-6f81157a94f8 HTTP/1.1[0m" 200 -
+2021-08-23 07:46:35,803 - werkzeug - INFO - 8239 - 127.0.0.1 - - [23/Aug/2021 07:46:35] "[37mGET /api/v1/cvparser/batch/task_status/1386043d-1edc-4e9b-8e00-6f81157a94f8 HTTP/1.1[0m" 200 -
+2021-08-23 07:46:36,255 - werkzeug - INFO - 8239 - 127.0.0.1 - - [23/Aug/2021 07:46:36] "[37mGET /api/v1/cvparser/batch/task_status/1386043d-1edc-4e9b-8e00-6f81157a94f8 HTTP/1.1[0m" 200 -
+2021-08-23 07:46:36,749 - werkzeug - INFO - 8239 - 127.0.0.1 - - [23/Aug/2021 07:46:36] "[37mGET /api/v1/cvparser/batch/task_status/1386043d-1edc-4e9b-8e00-6f81157a94f8 HTTP/1.1[0m" 200 -
+2021-08-23 07:46:37,188 - werkzeug - INFO - 8239 - 127.0.0.1 - - [23/Aug/2021 07:46:37] "[37mGET /api/v1/cvparser/batch/task_status/1386043d-1edc-4e9b-8e00-6f81157a94f8 HTTP/1.1[0m" 200 -
+2021-08-23 07:46:37,707 - werkzeug - INFO - 8239 - 127.0.0.1 - - [23/Aug/2021 07:46:37] "[37mGET /api/v1/cvparser/batch/task_status/1386043d-1edc-4e9b-8e00-6f81157a94f8 HTTP/1.1[0m" 200 -
+2021-08-23 07:46:38,194 - werkzeug - INFO - 8239 - 127.0.0.1 - - [23/Aug/2021 07:46:38] "[37mGET /api/v1/cvparser/batch/task_status/1386043d-1edc-4e9b-8e00-6f81157a94f8 HTTP/1.1[0m" 200 -
+2021-08-23 07:46:38,781 - werkzeug - INFO - 8239 - 127.0.0.1 - - [23/Aug/2021 07:46:38] "[37mGET /api/v1/cvparser/batch/task_status/1386043d-1edc-4e9b-8e00-6f81157a94f8 HTTP/1.1[0m" 200 -
+2021-08-23 07:46:39,244 - werkzeug - INFO - 8239 - 127.0.0.1 - - [23/Aug/2021 07:46:39] "[37mGET /api/v1/cvparser/batch/task_status/1386043d-1edc-4e9b-8e00-6f81157a94f8 HTTP/1.1[0m" 200 -
+2021-08-23 07:47:59,589 - werkzeug - INFO - 8239 -  * Detected change in '/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/flask_app.py', reloading
+2021-08-23 07:47:59,684 - werkzeug - INFO - 8192 -  * Restarting with stat
+2021-08-23 07:48:05,452 - werkzeug - WARNING - 8589 -  * Debugger is active!
+2021-08-23 07:48:05,452 - werkzeug - INFO - 8589 -  * Debugger PIN: 434-809-796
+2021-08-24 07:12:38,189 - werkzeug - INFO - 967 -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-08-24 07:12:38,196 - werkzeug - INFO - 967 -  * Restarting with stat
+2021-08-24 07:12:44,190 - werkzeug - WARNING - 1006 -  * Debugger is active!
+2021-08-24 07:12:44,191 - werkzeug - INFO - 1006 -  * Debugger PIN: 252-133-226
+2021-08-24 07:13:40,939 - flask_app - INFO - 1006 - <celery.backends.redis.RedisBackend object at 0x7f066c4fcf70>
+2021-08-24 07:13:41,074 - werkzeug - INFO - 1006 - 127.0.0.1 - - [24/Aug/2021 07:13:41] "[35m[1mPOST /api/v1/cvparser/batch HTTP/1.1[0m" 500 -
+2021-08-24 07:14:09,236 - werkzeug - INFO - 1006 -  * Detected change in '/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/flask_app.py', reloading
+2021-08-24 07:14:09,347 - werkzeug - INFO - 967 -  * Restarting with stat
+2021-08-24 07:14:15,273 - werkzeug - WARNING - 1491 -  * Debugger is active!
+2021-08-24 07:14:15,274 - werkzeug - INFO - 1491 -  * Debugger PIN: 252-133-226
+2021-08-24 07:14:21,098 - flask_app - INFO - 1491 - <celery.backends.redis.RedisBackend object at 0x7f08156bdf10>
+2021-08-24 07:14:21,100 - werkzeug - INFO - 1491 - 127.0.0.1 - - [24/Aug/2021 07:14:21] "[37mPOST /api/v1/cvparser/batch HTTP/1.1[0m" 200 -
+2021-08-24 07:14:37,575 - werkzeug - INFO - 1491 - 127.0.0.1 - - [24/Aug/2021 07:14:37] "[37mGET /api/v1/cvparser/batch/task_status/6e5059de-0154-4c59-94bf-6cf88fd2f316 HTTP/1.1[0m" 200 -
+2021-08-24 07:15:22,881 - werkzeug - INFO - 1491 -  * Detected change in '/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/flask_app.py', reloading
+2021-08-24 07:15:22,993 - werkzeug - INFO - 967 -  * Restarting with stat
+2021-08-24 07:15:28,985 - werkzeug - WARNING - 1812 -  * Debugger is active!
+2021-08-24 07:15:28,986 - werkzeug - INFO - 1812 -  * Debugger PIN: 252-133-226
+2021-08-24 07:15:41,535 - flask_app - INFO - 1812 - <celery.backends.redis.RedisBackend object at 0x7fd53562bf70>
+2021-08-24 07:15:41,537 - werkzeug - INFO - 1812 - 127.0.0.1 - - [24/Aug/2021 07:15:41] "[37mPOST /api/v1/cvparser/batch HTTP/1.1[0m" 200 -
+2021-08-24 07:17:21,097 - werkzeug - INFO - 1812 - 127.0.0.1 - - [24/Aug/2021 07:17:21] "[37mGET /api/v1/cvparser/batch/task_status/d6a22b9b-7667-4a89-a286-cac830f6d4f2 HTTP/1.1[0m" 200 -
+2021-08-24 07:17:45,093 - werkzeug - INFO - 1812 -  * Detected change in '/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/flask_app.py', reloading
+2021-08-24 07:17:45,212 - werkzeug - INFO - 967 -  * Restarting with stat
+2021-08-24 07:17:50,897 - werkzeug - WARNING - 2287 -  * Debugger is active!
+2021-08-24 07:17:50,898 - werkzeug - INFO - 2287 -  * Debugger PIN: 252-133-226
+2021-08-24 07:18:36,582 - werkzeug - INFO - 2287 -  * Detected change in '/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/flask_app.py', reloading
+2021-08-24 07:18:36,688 - werkzeug - INFO - 967 -  * Restarting with stat
+2021-08-24 07:18:42,567 - werkzeug - WARNING - 2383 -  * Debugger is active!
+2021-08-24 07:18:42,568 - werkzeug - INFO - 2383 -  * Debugger PIN: 252-133-226
+2021-08-24 07:18:47,291 - flask_app - INFO - 2383 - <celery.backends.redis.RedisBackend object at 0x7f64fd69bf70>
+2021-08-24 07:18:47,294 - werkzeug - INFO - 2383 - 127.0.0.1 - - [24/Aug/2021 07:18:47] "[37mPOST /api/v1/cvparser/batch HTTP/1.1[0m" 200 -
+2021-08-24 07:21:18,680 - werkzeug - INFO - 2383 - 127.0.0.1 - - [24/Aug/2021 07:21:18] "[37mGET /api/v1/cvparser/batch/task_status/f3b1b0ab-c417-4d3c-a99d-5d708fa1acae HTTP/1.1[0m" 200 -
+2021-08-24 07:23:03,038 - werkzeug - INFO - 2383 -  * Detected change in '/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/flask_app.py', reloading
+2021-08-24 07:23:03,140 - werkzeug - INFO - 967 -  * Restarting with stat
+2021-08-24 07:23:09,166 - werkzeug - WARNING - 2852 -  * Debugger is active!
+2021-08-24 07:23:09,166 - werkzeug - INFO - 2852 -  * Debugger PIN: 252-133-226
+2021-09-20 03:28:14,713 - werkzeug - INFO - 583 -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-09-20 03:28:14,721 - werkzeug - INFO - 583 -  * Restarting with stat
+2021-09-20 03:28:16,568 - werkzeug - WARNING - 609 -  * Debugger is active!
+2021-09-20 03:28:16,570 - werkzeug - INFO - 609 -  * Debugger PIN: 141-963-743
+2021-09-20 03:31:24,710 - celery.backends.redis - ERROR - 609 - Connection to Redis lost: Retry (0/20) now.
+2021-09-20 03:31:24,711 - celery.backends.redis - ERROR - 609 - Connection to Redis lost: Retry (1/20) in 1.00 second.
+2021-09-20 03:31:25,712 - celery.backends.redis - ERROR - 609 - Connection to Redis lost: Retry (2/20) in 1.00 second.
+2021-09-20 03:31:26,714 - celery.backends.redis - ERROR - 609 - Connection to Redis lost: Retry (3/20) in 1.00 second.
+2021-09-20 03:31:27,716 - celery.backends.redis - ERROR - 609 - Connection to Redis lost: Retry (4/20) in 1.00 second.
+2021-09-20 03:31:28,718 - celery.backends.redis - ERROR - 609 - Connection to Redis lost: Retry (5/20) in 1.00 second.
+2021-09-20 03:31:29,719 - celery.backends.redis - ERROR - 609 - Connection to Redis lost: Retry (6/20) in 1.00 second.
+2021-09-20 03:31:30,721 - celery.backends.redis - ERROR - 609 - Connection to Redis lost: Retry (7/20) in 1.00 second.
+2021-09-20 03:31:31,723 - celery.backends.redis - ERROR - 609 - Connection to Redis lost: Retry (8/20) in 1.00 second.
+2021-09-20 03:31:32,725 - celery.backends.redis - ERROR - 609 - Connection to Redis lost: Retry (9/20) in 1.00 second.
+2021-09-20 03:31:33,727 - celery.backends.redis - ERROR - 609 - Connection to Redis lost: Retry (10/20) in 1.00 second.
+2021-09-20 03:31:34,729 - celery.backends.redis - ERROR - 609 - Connection to Redis lost: Retry (11/20) in 1.00 second.
+2021-09-20 03:31:35,731 - celery.backends.redis - ERROR - 609 - Connection to Redis lost: Retry (12/20) in 1.00 second.
+2021-09-20 03:31:36,732 - celery.backends.redis - ERROR - 609 - Connection to Redis lost: Retry (13/20) in 1.00 second.
+2021-09-20 03:31:37,734 - celery.backends.redis - ERROR - 609 - Connection to Redis lost: Retry (14/20) in 1.00 second.
+2021-09-20 03:31:38,736 - celery.backends.redis - ERROR - 609 - Connection to Redis lost: Retry (15/20) in 1.00 second.
+2021-09-20 03:31:39,737 - celery.backends.redis - ERROR - 609 - Connection to Redis lost: Retry (16/20) in 1.00 second.
+2021-09-20 03:31:40,738 - celery.backends.redis - ERROR - 609 - Connection to Redis lost: Retry (17/20) in 1.00 second.
+2021-09-20 03:31:41,740 - celery.backends.redis - ERROR - 609 - Connection to Redis lost: Retry (18/20) in 1.00 second.
+2021-09-20 03:31:42,742 - celery.backends.redis - ERROR - 609 - Connection to Redis lost: Retry (19/20) in 1.00 second.
+2021-09-20 03:31:43,743 - celery.backends.redis - CRITICAL - 609 - 
+Retry limit exceeded while trying to reconnect to the Celery redis result store backend. The Celery application must be restarted.
+
+2021-09-20 03:31:44,137 - werkzeug - INFO - 609 - 127.0.0.1 - - [20/Sep/2021 03:31:44] "[35m[1mPOST /api/v1/cvparser/batch HTTP/1.1[0m" 500 -
+2021-09-20 03:32:48,577 - werkzeug - INFO - 609 -  * Detected change in '/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/flask_app_batch.py', reloading
+2021-09-20 03:32:48,613 - werkzeug - INFO - 583 -  * Restarting with stat
+2021-09-20 03:32:50,331 - werkzeug - WARNING - 952 -  * Debugger is active!
+2021-09-20 03:32:50,332 - werkzeug - INFO - 952 -  * Debugger PIN: 141-963-743
+2021-09-20 03:35:35,805 - werkzeug - INFO - 952 -  * Detected change in '/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/flask_app_batch.py', reloading
+2021-09-20 03:35:35,831 - werkzeug - INFO - 583 -  * Restarting with stat
+2021-09-20 03:35:37,956 - werkzeug - WARNING - 1011 -  * Debugger is active!
+2021-09-20 03:35:37,956 - werkzeug - INFO - 1011 -  * Debugger PIN: 141-963-743
+2021-09-20 03:40:15,231 - flask_app_batch - INFO - 1011 - <celery.backends.redis.RedisBackend object at 0x7f7003e22130>
+2021-09-20 03:40:15,233 - werkzeug - INFO - 1011 - 127.0.0.1 - - [20/Sep/2021 03:40:15] "[37mPOST /api/v1/cvparser/batch HTTP/1.1[0m" 200 -
+2021-09-20 03:42:33,653 - werkzeug - INFO - 1011 - 127.0.0.1 - - [20/Sep/2021 03:42:33] "[37mGET /api/v1/cvparser/batch/task_result/21dfb70e-7dcf-4f30-a79e-ce13484c15d6 HTTP/1.1[0m" 200 -
+2021-09-20 03:42:36,076 - werkzeug - INFO - 1011 - 127.0.0.1 - - [20/Sep/2021 03:42:36] "[37mGET /api/v1/cvparser/batch/task_result/21dfb70e-7dcf-4f30-a79e-ce13484c15d6 HTTP/1.1[0m" 200 -
+2021-09-20 03:42:36,958 - werkzeug - INFO - 1011 - 127.0.0.1 - - [20/Sep/2021 03:42:36] "[37mGET /api/v1/cvparser/batch/task_result/21dfb70e-7dcf-4f30-a79e-ce13484c15d6 HTTP/1.1[0m" 200 -
+2021-09-20 03:44:54,518 - werkzeug - INFO - 1011 - 127.0.0.1 - - [20/Sep/2021 03:44:54] "[37mGET /api/v1/cvparser/batch/task_result/21dfb70e-7dcf-4f30-a79e-ce13484c15d6 HTTP/1.1[0m" 200 -
+2021-09-20 03:51:21,593 - flask_app_batch - INFO - 1011 - <celery.backends.redis.RedisBackend object at 0x7f7003e22220>
+2021-09-20 03:51:21,594 - werkzeug - INFO - 1011 - 127.0.0.1 - - [20/Sep/2021 03:51:21] "[37mPOST /api/v1/cvparser/batch HTTP/1.1[0m" 200 -
+2021-09-20 03:53:46,705 - flask_app_batch - INFO - 1011 - <celery.backends.redis.RedisBackend object at 0x7f7001dd9820>
+2021-09-20 03:53:46,706 - werkzeug - INFO - 1011 - 127.0.0.1 - - [20/Sep/2021 03:53:46] "[37mPOST /api/v1/cvparser/batch HTTP/1.1[0m" 200 -
+2021-09-20 03:55:15,957 - flask_app_batch - INFO - 1011 - <celery.backends.redis.RedisBackend object at 0x7f7001db9c70>
+2021-09-20 03:55:15,958 - werkzeug - INFO - 1011 - 127.0.0.1 - - [20/Sep/2021 03:55:15] "[37mPOST /api/v1/cvparser/batch HTTP/1.1[0m" 200 -
+2021-09-20 03:56:46,677 - flask_app_batch - INFO - 1011 - <celery.backends.redis.RedisBackend object at 0x7f7001db9c40>
+2021-09-20 03:56:46,678 - werkzeug - INFO - 1011 - 127.0.0.1 - - [20/Sep/2021 03:56:46] "[37mPOST /api/v1/cvparser/batch HTTP/1.1[0m" 200 -
+2021-09-20 03:59:10,268 - flask_app_batch - INFO - 1011 - <celery.backends.redis.RedisBackend object at 0x7f7001db9760>
+2021-09-20 03:59:10,269 - werkzeug - INFO - 1011 - 127.0.0.1 - - [20/Sep/2021 03:59:10] "[37mPOST /api/v1/cvparser/batch HTTP/1.1[0m" 200 -
+2021-09-20 03:59:36,108 - flask_app_batch - INFO - 1011 - <celery.backends.redis.RedisBackend object at 0x7f7001db9af0>
+2021-09-20 03:59:36,109 - werkzeug - INFO - 1011 - 127.0.0.1 - - [20/Sep/2021 03:59:36] "[37mPOST /api/v1/cvparser/batch HTTP/1.1[0m" 200 -
+2021-09-20 04:00:04,278 - flask_app_batch - INFO - 1011 - <celery.backends.redis.RedisBackend object at 0x7f7001dd9a00>
+2021-09-20 04:00:04,279 - werkzeug - INFO - 1011 - 127.0.0.1 - - [20/Sep/2021 04:00:04] "[37mPOST /api/v1/cvparser/batch HTTP/1.1[0m" 200 -
+2021-09-20 04:01:05,865 - flask_app_batch - INFO - 1011 - <celery.backends.redis.RedisBackend object at 0x7f7001dd9460>
+2021-09-20 04:01:05,866 - werkzeug - INFO - 1011 - 127.0.0.1 - - [20/Sep/2021 04:01:05] "[37mPOST /api/v1/cvparser/batch HTTP/1.1[0m" 200 -
+2021-09-20 04:01:05,868 - werkzeug - INFO - 1011 - 127.0.0.1 - - [20/Sep/2021 04:01:05] "[31m[1mPOST /api/v1/cvparser/batch/task_result/5f28a0c9-30ec-46e6-8842-519ac343012a HTTP/1.1[0m" 405 -
+2021-09-20 04:01:20,038 - flask_app_batch - INFO - 1011 - <celery.backends.redis.RedisBackend object at 0x7f7003282070>
+2021-09-20 04:01:20,039 - werkzeug - INFO - 1011 - 127.0.0.1 - - [20/Sep/2021 04:01:20] "[37mPOST /api/v1/cvparser/batch HTTP/1.1[0m" 200 -
+2021-09-20 04:01:20,042 - werkzeug - INFO - 1011 - 127.0.0.1 - - [20/Sep/2021 04:01:20] "[37mGET /api/v1/cvparser/batch/task_result/a7eae627-4bf2-4bd1-b91f-19d4119dea77 HTTP/1.1[0m" 200 -
+2021-09-20 04:03:14,938 - flask_app_batch - INFO - 1011 - <celery.backends.redis.RedisBackend object at 0x7f7003282040>
+2021-09-20 04:03:14,939 - werkzeug - INFO - 1011 - 127.0.0.1 - - [20/Sep/2021 04:03:14] "[37mPOST /api/v1/cvparser/batch HTTP/1.1[0m" 200 -
+2021-09-20 04:03:14,942 - werkzeug - INFO - 1011 - 127.0.0.1 - - [20/Sep/2021 04:03:14] "[37mGET /api/v1/cvparser/batch/task_result/11a2d707-19be-4df5-b445-d732840d85ab HTTP/1.1[0m" 200 -
+2021-09-20 04:03:14,945 - werkzeug - INFO - 1011 - 127.0.0.1 - - [20/Sep/2021 04:03:14] "[37mGET /api/v1/cvparser/batch/task_result/11a2d707-19be-4df5-b445-d732840d85ab HTTP/1.1[0m" 200 -
+2021-09-20 04:03:17,951 - werkzeug - INFO - 1011 - 127.0.0.1 - - [20/Sep/2021 04:03:17] "[37mGET /api/v1/cvparser/batch/task_result/11a2d707-19be-4df5-b445-d732840d85ab HTTP/1.1[0m" 200 -
+2021-09-20 04:03:20,957 - werkzeug - INFO - 1011 - 127.0.0.1 - - [20/Sep/2021 04:03:20] "[37mGET /api/v1/cvparser/batch/task_result/11a2d707-19be-4df5-b445-d732840d85ab HTTP/1.1[0m" 200 -
+2021-09-20 04:03:23,964 - werkzeug - INFO - 1011 - 127.0.0.1 - - [20/Sep/2021 04:03:23] "[37mGET /api/v1/cvparser/batch/task_result/11a2d707-19be-4df5-b445-d732840d85ab HTTP/1.1[0m" 200 -
+2021-09-20 04:03:26,970 - werkzeug - INFO - 1011 - 127.0.0.1 - - [20/Sep/2021 04:03:26] "[37mGET /api/v1/cvparser/batch/task_result/11a2d707-19be-4df5-b445-d732840d85ab HTTP/1.1[0m" 200 -
+2021-09-20 04:03:29,977 - werkzeug - INFO - 1011 - 127.0.0.1 - - [20/Sep/2021 04:03:29] "[37mGET /api/v1/cvparser/batch/task_result/11a2d707-19be-4df5-b445-d732840d85ab HTTP/1.1[0m" 200 -
+2021-09-20 04:03:32,984 - werkzeug - INFO - 1011 - 127.0.0.1 - - [20/Sep/2021 04:03:32] "[37mGET /api/v1/cvparser/batch/task_result/11a2d707-19be-4df5-b445-d732840d85ab HTTP/1.1[0m" 200 -
+2021-09-20 04:03:35,991 - werkzeug - INFO - 1011 - 127.0.0.1 - - [20/Sep/2021 04:03:35] "[37mGET /api/v1/cvparser/batch/task_result/11a2d707-19be-4df5-b445-d732840d85ab HTTP/1.1[0m" 200 -
+2021-09-20 04:03:39,006 - werkzeug - INFO - 1011 - 127.0.0.1 - - [20/Sep/2021 04:03:39] "[37mGET /api/v1/cvparser/batch/task_result/11a2d707-19be-4df5-b445-d732840d85ab HTTP/1.1[0m" 200 -
+2021-09-20 04:07:29,623 - flask_app_batch - INFO - 1011 - <celery.backends.redis.RedisBackend object at 0x7f7001df3130>
+2021-09-20 04:07:29,624 - werkzeug - INFO - 1011 - 127.0.0.1 - - [20/Sep/2021 04:07:29] "[37mPOST /api/v1/cvparser/batch HTTP/1.1[0m" 200 -
+2021-09-20 04:07:29,627 - werkzeug - INFO - 1011 - 127.0.0.1 - - [20/Sep/2021 04:07:29] "[37mGET /api/v1/cvparser/batch/task_result/a6ed9c71-8281-469e-bc1a-f329a00ebc31 HTTP/1.1[0m" 200 -
+2021-09-20 04:07:29,629 - werkzeug - INFO - 1011 - 127.0.0.1 - - [20/Sep/2021 04:07:29] "[37mGET /api/v1/cvparser/batch/task_result/a6ed9c71-8281-469e-bc1a-f329a00ebc31 HTTP/1.1[0m" 200 -
+2021-09-20 04:07:32,635 - werkzeug - INFO - 1011 - 127.0.0.1 - - [20/Sep/2021 04:07:32] "[37mGET /api/v1/cvparser/batch/task_result/a6ed9c71-8281-469e-bc1a-f329a00ebc31 HTTP/1.1[0m" 200 -
+2021-09-20 04:07:35,641 - werkzeug - INFO - 1011 - 127.0.0.1 - - [20/Sep/2021 04:07:35] "[37mGET /api/v1/cvparser/batch/task_result/a6ed9c71-8281-469e-bc1a-f329a00ebc31 HTTP/1.1[0m" 200 -
+2021-09-20 04:07:38,647 - werkzeug - INFO - 1011 - 127.0.0.1 - - [20/Sep/2021 04:07:38] "[37mGET /api/v1/cvparser/batch/task_result/a6ed9c71-8281-469e-bc1a-f329a00ebc31 HTTP/1.1[0m" 200 -
+2021-09-20 04:07:41,654 - werkzeug - INFO - 1011 - 127.0.0.1 - - [20/Sep/2021 04:07:41] "[37mGET /api/v1/cvparser/batch/task_result/a6ed9c71-8281-469e-bc1a-f329a00ebc31 HTTP/1.1[0m" 200 -
+2021-09-20 04:07:44,660 - werkzeug - INFO - 1011 - 127.0.0.1 - - [20/Sep/2021 04:07:44] "[37mGET /api/v1/cvparser/batch/task_result/a6ed9c71-8281-469e-bc1a-f329a00ebc31 HTTP/1.1[0m" 200 -
+2021-09-20 04:07:47,667 - werkzeug - INFO - 1011 - 127.0.0.1 - - [20/Sep/2021 04:07:47] "[37mGET /api/v1/cvparser/batch/task_result/a6ed9c71-8281-469e-bc1a-f329a00ebc31 HTTP/1.1[0m" 200 -
+2021-09-20 04:07:50,674 - werkzeug - INFO - 1011 - 127.0.0.1 - - [20/Sep/2021 04:07:50] "[37mGET /api/v1/cvparser/batch/task_result/a6ed9c71-8281-469e-bc1a-f329a00ebc31 HTTP/1.1[0m" 200 -
+2021-09-20 04:07:53,688 - werkzeug - INFO - 1011 - 127.0.0.1 - - [20/Sep/2021 04:07:53] "[37mGET /api/v1/cvparser/batch/task_result/a6ed9c71-8281-469e-bc1a-f329a00ebc31 HTTP/1.1[0m" 200 -
+2021-09-20 04:11:32,223 - werkzeug - INFO - 1011 -  * Detected change in '/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/flask_app_batch.py', reloading
+2021-09-20 04:11:32,323 - werkzeug - INFO - 583 -  * Restarting with stat
+2021-09-20 04:11:34,192 - werkzeug - WARNING - 6503 -  * Debugger is active!
+2021-09-20 04:11:34,192 - werkzeug - INFO - 6503 -  * Debugger PIN: 141-963-743
+2021-09-20 04:21:24,245 - werkzeug - INFO - 7075 -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-09-20 04:21:24,252 - werkzeug - INFO - 7075 -  * Restarting with stat
+2021-09-20 04:21:26,181 - werkzeug - WARNING - 7104 -  * Debugger is active!
+2021-09-20 04:21:26,182 - werkzeug - INFO - 7104 -  * Debugger PIN: 141-963-743
+2021-09-20 04:22:22,276 - flask_app_batch - INFO - 7104 - <celery.backends.redis.RedisBackend object at 0x7f3a1d5c1040>
+2021-09-20 04:22:22,278 - werkzeug - INFO - 7104 - 127.0.0.1 - - [20/Sep/2021 04:22:22] "[37mPOST /api/v1/cvparser/batch HTTP/1.1[0m" 200 -
+2021-09-20 04:22:22,284 - werkzeug - INFO - 7104 - 127.0.0.1 - - [20/Sep/2021 04:22:22] "[37mGET /api/v1/cvparser/batch/task_result/046ee2a9-9213-4ee4-b23e-3503cb1cbe77 HTTP/1.1[0m" 200 -
+2021-09-20 04:22:22,289 - werkzeug - INFO - 7104 - 127.0.0.1 - - [20/Sep/2021 04:22:22] "[37mGET /api/v1/cvparser/batch/task_result/046ee2a9-9213-4ee4-b23e-3503cb1cbe77 HTTP/1.1[0m" 200 -
+2021-09-20 04:22:25,296 - werkzeug - INFO - 7104 - 127.0.0.1 - - [20/Sep/2021 04:22:25] "[37mGET /api/v1/cvparser/batch/task_result/046ee2a9-9213-4ee4-b23e-3503cb1cbe77 HTTP/1.1[0m" 200 -
+2021-09-20 04:22:28,303 - werkzeug - INFO - 7104 - 127.0.0.1 - - [20/Sep/2021 04:22:28] "[37mGET /api/v1/cvparser/batch/task_result/046ee2a9-9213-4ee4-b23e-3503cb1cbe77 HTTP/1.1[0m" 200 -
+2021-09-20 04:22:31,309 - werkzeug - INFO - 7104 - 127.0.0.1 - - [20/Sep/2021 04:22:31] "[37mGET /api/v1/cvparser/batch/task_result/046ee2a9-9213-4ee4-b23e-3503cb1cbe77 HTTP/1.1[0m" 200 -
+2021-09-20 04:22:34,317 - werkzeug - INFO - 7104 - 127.0.0.1 - - [20/Sep/2021 04:22:34] "[37mGET /api/v1/cvparser/batch/task_result/046ee2a9-9213-4ee4-b23e-3503cb1cbe77 HTTP/1.1[0m" 200 -
+2021-09-20 04:22:37,324 - werkzeug - INFO - 7104 - 127.0.0.1 - - [20/Sep/2021 04:22:37] "[37mGET /api/v1/cvparser/batch/task_result/046ee2a9-9213-4ee4-b23e-3503cb1cbe77 HTTP/1.1[0m" 200 -
+2021-09-20 04:22:40,331 - werkzeug - INFO - 7104 - 127.0.0.1 - - [20/Sep/2021 04:22:40] "[37mGET /api/v1/cvparser/batch/task_result/046ee2a9-9213-4ee4-b23e-3503cb1cbe77 HTTP/1.1[0m" 200 -
+2021-09-20 04:22:43,338 - werkzeug - INFO - 7104 - 127.0.0.1 - - [20/Sep/2021 04:22:43] "[37mGET /api/v1/cvparser/batch/task_result/046ee2a9-9213-4ee4-b23e-3503cb1cbe77 HTTP/1.1[0m" 200 -
+2021-09-20 04:22:46,354 - werkzeug - INFO - 7104 - 127.0.0.1 - - [20/Sep/2021 04:22:46] "[37mGET /api/v1/cvparser/batch/task_result/046ee2a9-9213-4ee4-b23e-3503cb1cbe77 HTTP/1.1[0m" 200 -
+2021-09-20 04:37:21,873 - werkzeug - INFO - 7104 -  * Detected change in '/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/flask_app_batch.py', reloading
+2021-09-20 04:37:21,996 - werkzeug - INFO - 7075 -  * Restarting with stat
+2021-09-20 04:37:24,139 - werkzeug - WARNING - 8003 -  * Debugger is active!
+2021-09-20 04:37:24,140 - werkzeug - INFO - 8003 -  * Debugger PIN: 141-963-743
+2021-09-20 04:39:13,673 - werkzeug - INFO - 8003 -  * Detected change in '/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/flask_app_batch.py', reloading
+2021-09-20 04:39:13,696 - werkzeug - INFO - 7075 -  * Restarting with stat
+2021-09-20 04:39:15,724 - werkzeug - WARNING - 8053 -  * Debugger is active!
+2021-09-20 04:39:15,724 - werkzeug - INFO - 8053 -  * Debugger PIN: 141-963-743
+2021-09-20 04:40:04,484 - werkzeug - INFO - 8053 -  * Detected change in '/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/flask_app_batch.py', reloading
+2021-09-20 04:40:04,509 - werkzeug - INFO - 7075 -  * Restarting with stat
+2021-09-20 04:40:06,540 - werkzeug - WARNING - 8117 -  * Debugger is active!
+2021-09-20 04:40:06,541 - werkzeug - INFO - 8117 -  * Debugger PIN: 141-963-743
+2021-09-20 04:40:42,075 - werkzeug - INFO - 8117 -  * Detected change in '/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/flask_app_batch.py', reloading
+2021-09-20 04:40:42,103 - werkzeug - INFO - 7075 -  * Restarting with stat
+2021-09-20 06:12:40,365 - werkzeug - INFO - 8630 -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-09-20 06:12:40,372 - werkzeug - INFO - 8630 -  * Restarting with stat
+2021-09-20 06:12:42,227 - werkzeug - WARNING - 8642 -  * Debugger is active!
+2021-09-20 06:12:42,228 - werkzeug - INFO - 8642 -  * Debugger PIN: 141-963-743
+2021-09-20 06:12:48,958 - flask_app_batch - INFO - 8642 - <celery.backends.redis.RedisBackend object at 0x7f53757110d0>
+2021-09-20 06:12:48,960 - werkzeug - INFO - 8642 - 127.0.0.1 - - [20/Sep/2021 06:12:48] "[37mPOST /api/v1/cvparser/batch HTTP/1.1[0m" 200 -
+2021-09-20 06:12:48,964 - werkzeug - INFO - 8642 - 127.0.0.1 - - [20/Sep/2021 06:12:48] "[37mGET /api/v1/cvparser/batch/task_result/a9be8876-f55b-4a59-b032-e282348ad5d1 HTTP/1.1[0m" 200 -
+2021-09-20 06:13:30,508 - flask_app_batch - INFO - 8642 - <celery.backends.redis.RedisBackend object at 0x7f53757111c0>
+2021-09-20 06:13:30,509 - werkzeug - INFO - 8642 - 127.0.0.1 - - [20/Sep/2021 06:13:30] "[37mPOST /api/v1/cvparser/batch HTTP/1.1[0m" 200 -
+2021-09-20 06:13:30,512 - werkzeug - INFO - 8642 - 127.0.0.1 - - [20/Sep/2021 06:13:30] "[37mGET /api/v1/cvparser/batch/task_result/dc47a082-b24e-4e0d-8898-a2de5e72f557 HTTP/1.1[0m" 200 -
+2021-09-20 06:13:30,515 - werkzeug - INFO - 8642 - 127.0.0.1 - - [20/Sep/2021 06:13:30] "[37mGET /api/v1/cvparser/batch/task_result/dc47a082-b24e-4e0d-8898-a2de5e72f557 HTTP/1.1[0m" 200 -
+2021-09-20 06:13:33,522 - werkzeug - INFO - 8642 - 127.0.0.1 - - [20/Sep/2021 06:13:33] "[37mGET /api/v1/cvparser/batch/task_result/dc47a082-b24e-4e0d-8898-a2de5e72f557 HTTP/1.1[0m" 200 -
+2021-09-20 06:13:36,529 - werkzeug - INFO - 8642 - 127.0.0.1 - - [20/Sep/2021 06:13:36] "[37mGET /api/v1/cvparser/batch/task_result/dc47a082-b24e-4e0d-8898-a2de5e72f557 HTTP/1.1[0m" 200 -
+2021-09-20 06:13:39,536 - werkzeug - INFO - 8642 - 127.0.0.1 - - [20/Sep/2021 06:13:39] "[37mGET /api/v1/cvparser/batch/task_result/dc47a082-b24e-4e0d-8898-a2de5e72f557 HTTP/1.1[0m" 200 -
+2021-09-20 06:13:42,543 - werkzeug - INFO - 8642 - 127.0.0.1 - - [20/Sep/2021 06:13:42] "[37mGET /api/v1/cvparser/batch/task_result/dc47a082-b24e-4e0d-8898-a2de5e72f557 HTTP/1.1[0m" 200 -
+2021-09-20 06:13:45,550 - werkzeug - INFO - 8642 - 127.0.0.1 - - [20/Sep/2021 06:13:45] "[37mGET /api/v1/cvparser/batch/task_result/dc47a082-b24e-4e0d-8898-a2de5e72f557 HTTP/1.1[0m" 200 -
+2021-09-20 06:13:48,556 - werkzeug - INFO - 8642 - 127.0.0.1 - - [20/Sep/2021 06:13:48] "[37mGET /api/v1/cvparser/batch/task_result/dc47a082-b24e-4e0d-8898-a2de5e72f557 HTTP/1.1[0m" 200 -
+2021-09-20 06:13:51,560 - werkzeug - INFO - 8642 - 127.0.0.1 - - [20/Sep/2021 06:13:51] "[37mGET /api/v1/cvparser/batch/task_result/dc47a082-b24e-4e0d-8898-a2de5e72f557 HTTP/1.1[0m" 200 -
+2021-09-20 06:13:54,577 - werkzeug - INFO - 8642 - 127.0.0.1 - - [20/Sep/2021 06:13:54] "[37mGET /api/v1/cvparser/batch/task_result/dc47a082-b24e-4e0d-8898-a2de5e72f557 HTTP/1.1[0m" 200 -
+2021-09-20 06:14:56,699 - werkzeug - INFO - 8642 -  * Detected change in '/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/flask_app_batch.py', reloading
+2021-09-20 06:14:56,730 - werkzeug - INFO - 8630 -  * Restarting with stat
+2021-09-20 06:14:58,707 - werkzeug - WARNING - 9370 -  * Debugger is active!
+2021-09-20 06:14:58,707 - werkzeug - INFO - 9370 -  * Debugger PIN: 141-963-743
+2021-09-20 06:15:08,026 - flask_app_batch - INFO - 9370 - <celery.backends.redis.RedisBackend object at 0x7f597021b040>
+2021-09-20 06:15:08,028 - werkzeug - INFO - 9370 - 127.0.0.1 - - [20/Sep/2021 06:15:08] "[37mPOST /api/v1/cvparser/batch HTTP/1.1[0m" 200 -
+2021-09-20 06:15:08,033 - werkzeug - INFO - 9370 - 127.0.0.1 - - [20/Sep/2021 06:15:08] "[37mGET /api/v1/cvparser/batch/task_result/865107f3-ebd4-4e91-9032-65e3a436ef60 HTTP/1.1[0m" 200 -
+2021-09-20 06:15:08,038 - werkzeug - INFO - 9370 - 127.0.0.1 - - [20/Sep/2021 06:15:08] "[37mGET /api/v1/cvparser/batch/task_result/865107f3-ebd4-4e91-9032-65e3a436ef60 HTTP/1.1[0m" 200 -
+2021-09-20 06:15:11,044 - werkzeug - INFO - 9370 - 127.0.0.1 - - [20/Sep/2021 06:15:11] "[37mGET /api/v1/cvparser/batch/task_result/865107f3-ebd4-4e91-9032-65e3a436ef60 HTTP/1.1[0m" 200 -
+2021-09-20 06:15:14,051 - werkzeug - INFO - 9370 - 127.0.0.1 - - [20/Sep/2021 06:15:14] "[37mGET /api/v1/cvparser/batch/task_result/865107f3-ebd4-4e91-9032-65e3a436ef60 HTTP/1.1[0m" 200 -
+2021-09-20 06:15:17,058 - werkzeug - INFO - 9370 - 127.0.0.1 - - [20/Sep/2021 06:15:17] "[37mGET /api/v1/cvparser/batch/task_result/865107f3-ebd4-4e91-9032-65e3a436ef60 HTTP/1.1[0m" 200 -
+2021-09-20 06:15:20,072 - werkzeug - INFO - 9370 - 127.0.0.1 - - [20/Sep/2021 06:15:20] "[37mGET /api/v1/cvparser/batch/task_result/865107f3-ebd4-4e91-9032-65e3a436ef60 HTTP/1.1[0m" 200 -
+2021-09-20 06:16:49,309 - flask_app_batch - INFO - 9370 - <celery.backends.redis.RedisBackend object at 0x7f5970213e20>
+2021-09-20 06:16:49,310 - werkzeug - INFO - 9370 - 127.0.0.1 - - [20/Sep/2021 06:16:49] "[37mPOST /api/v1/cvparser/batch HTTP/1.1[0m" 200 -
+2021-09-20 06:16:49,314 - werkzeug - INFO - 9370 - 127.0.0.1 - - [20/Sep/2021 06:16:49] "[37mGET /api/v1/cvparser/batch/task_result/26b47d31-5c5e-4244-bfa2-2579c9d2770d HTTP/1.1[0m" 200 -
+2021-09-20 06:16:49,319 - werkzeug - INFO - 9370 - 127.0.0.1 - - [20/Sep/2021 06:16:49] "[37mGET /api/v1/cvparser/batch/task_result/26b47d31-5c5e-4244-bfa2-2579c9d2770d HTTP/1.1[0m" 200 -
+2021-09-20 06:16:52,326 - werkzeug - INFO - 9370 - 127.0.0.1 - - [20/Sep/2021 06:16:52] "[37mGET /api/v1/cvparser/batch/task_result/26b47d31-5c5e-4244-bfa2-2579c9d2770d HTTP/1.1[0m" 200 -
+2021-09-20 06:16:55,331 - werkzeug - INFO - 9370 - 127.0.0.1 - - [20/Sep/2021 06:16:55] "[37mGET /api/v1/cvparser/batch/task_result/26b47d31-5c5e-4244-bfa2-2579c9d2770d HTTP/1.1[0m" 200 -
+2021-09-20 06:16:58,338 - werkzeug - INFO - 9370 - 127.0.0.1 - - [20/Sep/2021 06:16:58] "[37mGET /api/v1/cvparser/batch/task_result/26b47d31-5c5e-4244-bfa2-2579c9d2770d HTTP/1.1[0m" 200 -
+2021-09-20 06:17:01,354 - werkzeug - INFO - 9370 - 127.0.0.1 - - [20/Sep/2021 06:17:01] "[37mGET /api/v1/cvparser/batch/task_result/26b47d31-5c5e-4244-bfa2-2579c9d2770d HTTP/1.1[0m" 200 -
+2021-09-20 06:17:50,137 - flask_app_batch - INFO - 9370 - <celery.backends.redis.RedisBackend object at 0x7f596e1d8400>
+2021-09-20 06:17:50,138 - werkzeug - INFO - 9370 - 127.0.0.1 - - [20/Sep/2021 06:17:50] "[37mPOST /api/v1/cvparser/batch HTTP/1.1[0m" 200 -
+2021-09-20 06:17:50,141 - werkzeug - INFO - 9370 - 127.0.0.1 - - [20/Sep/2021 06:17:50] "[37mGET /api/v1/cvparser/batch/task_result/b63edbe9-8ff8-485a-a5a9-d8a9a2fd483b HTTP/1.1[0m" 200 -
+2021-09-20 06:17:50,144 - werkzeug - INFO - 9370 - 127.0.0.1 - - [20/Sep/2021 06:17:50] "[37mGET /api/v1/cvparser/batch/task_result/b63edbe9-8ff8-485a-a5a9-d8a9a2fd483b HTTP/1.1[0m" 200 -
+2021-09-20 06:17:53,151 - werkzeug - INFO - 9370 - 127.0.0.1 - - [20/Sep/2021 06:17:53] "[37mGET /api/v1/cvparser/batch/task_result/b63edbe9-8ff8-485a-a5a9-d8a9a2fd483b HTTP/1.1[0m" 200 -
+2021-09-20 06:17:56,158 - werkzeug - INFO - 9370 - 127.0.0.1 - - [20/Sep/2021 06:17:56] "[37mGET /api/v1/cvparser/batch/task_result/b63edbe9-8ff8-485a-a5a9-d8a9a2fd483b HTTP/1.1[0m" 200 -
+2021-09-20 06:17:59,165 - werkzeug - INFO - 9370 - 127.0.0.1 - - [20/Sep/2021 06:17:59] "[37mGET /api/v1/cvparser/batch/task_result/b63edbe9-8ff8-485a-a5a9-d8a9a2fd483b HTTP/1.1[0m" 200 -
+2021-09-20 06:18:02,285 - werkzeug - INFO - 9370 - 127.0.0.1 - - [20/Sep/2021 06:18:02] "[35m[1mGET /api/v1/cvparser/batch/task_result/b63edbe9-8ff8-485a-a5a9-d8a9a2fd483b HTTP/1.1[0m" 500 -
+2021-09-20 06:19:39,663 - werkzeug - INFO - 9370 -  * Detected change in '/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/flask_app_batch.py', reloading
+2021-09-20 06:19:39,698 - werkzeug - INFO - 8630 -  * Restarting with stat
+2021-09-20 06:19:41,701 - werkzeug - WARNING - 10645 -  * Debugger is active!
+2021-09-20 06:19:41,701 - werkzeug - INFO - 10645 -  * Debugger PIN: 141-963-743
+2021-09-20 06:19:52,347 - flask_app_batch - INFO - 10645 - <celery.backends.redis.RedisBackend object at 0x7f9e8c7d90d0>
+2021-09-20 06:19:52,348 - werkzeug - INFO - 10645 - 127.0.0.1 - - [20/Sep/2021 06:19:52] "[37mPOST /api/v1/cvparser/batch HTTP/1.1[0m" 200 -
+2021-09-20 06:19:52,353 - werkzeug - INFO - 10645 - 127.0.0.1 - - [20/Sep/2021 06:19:52] "[37mGET /api/v1/cvparser/batch/task_result/8778411d-c42b-4c98-b9ff-671b30429c19 HTTP/1.1[0m" 200 -
+2021-09-20 06:19:52,357 - werkzeug - INFO - 10645 - 127.0.0.1 - - [20/Sep/2021 06:19:52] "[37mGET /api/v1/cvparser/batch/task_result/8778411d-c42b-4c98-b9ff-671b30429c19 HTTP/1.1[0m" 200 -
+2021-09-20 06:19:55,364 - werkzeug - INFO - 10645 - 127.0.0.1 - - [20/Sep/2021 06:19:55] "[37mGET /api/v1/cvparser/batch/task_result/8778411d-c42b-4c98-b9ff-671b30429c19 HTTP/1.1[0m" 200 -
+2021-09-20 06:19:58,371 - werkzeug - INFO - 10645 - 127.0.0.1 - - [20/Sep/2021 06:19:58] "[37mGET /api/v1/cvparser/batch/task_result/8778411d-c42b-4c98-b9ff-671b30429c19 HTTP/1.1[0m" 200 -
+2021-09-20 06:20:01,377 - werkzeug - INFO - 10645 - 127.0.0.1 - - [20/Sep/2021 06:20:01] "[37mGET /api/v1/cvparser/batch/task_result/8778411d-c42b-4c98-b9ff-671b30429c19 HTTP/1.1[0m" 200 -
+2021-09-20 06:20:04,506 - werkzeug - INFO - 10645 - 127.0.0.1 - - [20/Sep/2021 06:20:04] "[35m[1mGET /api/v1/cvparser/batch/task_result/8778411d-c42b-4c98-b9ff-671b30429c19 HTTP/1.1[0m" 500 -
+2021-09-20 06:20:07,590 - werkzeug - INFO - 10645 - 127.0.0.1 - - [20/Sep/2021 06:20:07] "[35m[1mGET /api/v1/cvparser/batch/task_result/8778411d-c42b-4c98-b9ff-671b30429c19 HTTP/1.1[0m" 500 -
+2021-09-20 06:20:10,696 - werkzeug - INFO - 10645 - 127.0.0.1 - - [20/Sep/2021 06:20:10] "[35m[1mGET /api/v1/cvparser/batch/task_result/8778411d-c42b-4c98-b9ff-671b30429c19 HTTP/1.1[0m" 500 -
+2021-09-20 06:20:13,775 - werkzeug - INFO - 10645 - 127.0.0.1 - - [20/Sep/2021 06:20:13] "[35m[1mGET /api/v1/cvparser/batch/task_result/8778411d-c42b-4c98-b9ff-671b30429c19 HTTP/1.1[0m" 500 -
+2021-09-20 06:20:16,882 - werkzeug - INFO - 10645 - 127.0.0.1 - - [20/Sep/2021 06:20:16] "[35m[1mGET /api/v1/cvparser/batch/task_result/8778411d-c42b-4c98-b9ff-671b30429c19 HTTP/1.1[0m" 500 -
+2021-09-20 06:20:19,965 - werkzeug - INFO - 10645 - 127.0.0.1 - - [20/Sep/2021 06:20:19] "[35m[1mGET /api/v1/cvparser/batch/task_result/8778411d-c42b-4c98-b9ff-671b30429c19 HTTP/1.1[0m" 500 -
+2021-09-20 06:20:23,065 - werkzeug - INFO - 10645 - 127.0.0.1 - - [20/Sep/2021 06:20:23] "[35m[1mGET /api/v1/cvparser/batch/task_result/8778411d-c42b-4c98-b9ff-671b30429c19 HTTP/1.1[0m" 500 -
+2021-09-20 06:20:26,161 - werkzeug - INFO - 10645 - 127.0.0.1 - - [20/Sep/2021 06:20:26] "[35m[1mGET /api/v1/cvparser/batch/task_result/8778411d-c42b-4c98-b9ff-671b30429c19 HTTP/1.1[0m" 500 -
+2021-09-20 06:20:29,261 - werkzeug - INFO - 10645 - 127.0.0.1 - - [20/Sep/2021 06:20:29] "[35m[1mGET /api/v1/cvparser/batch/task_result/8778411d-c42b-4c98-b9ff-671b30429c19 HTTP/1.1[0m" 500 -
+2021-09-20 06:20:32,357 - werkzeug - INFO - 10645 - 127.0.0.1 - - [20/Sep/2021 06:20:32] "[35m[1mGET /api/v1/cvparser/batch/task_result/8778411d-c42b-4c98-b9ff-671b30429c19 HTTP/1.1[0m" 500 -
+2021-09-20 06:20:35,462 - werkzeug - INFO - 10645 - 127.0.0.1 - - [20/Sep/2021 06:20:35] "[35m[1mGET /api/v1/cvparser/batch/task_result/8778411d-c42b-4c98-b9ff-671b30429c19 HTTP/1.1[0m" 500 -
+2021-09-20 06:20:38,537 - werkzeug - INFO - 10645 - 127.0.0.1 - - [20/Sep/2021 06:20:38] "[35m[1mGET /api/v1/cvparser/batch/task_result/8778411d-c42b-4c98-b9ff-671b30429c19 HTTP/1.1[0m" 500 -
+2021-09-20 06:20:41,648 - werkzeug - INFO - 10645 - 127.0.0.1 - - [20/Sep/2021 06:20:41] "[35m[1mGET /api/v1/cvparser/batch/task_result/8778411d-c42b-4c98-b9ff-671b30429c19 HTTP/1.1[0m" 500 -
+2021-09-20 06:20:44,746 - werkzeug - INFO - 10645 - 127.0.0.1 - - [20/Sep/2021 06:20:44] "[35m[1mGET /api/v1/cvparser/batch/task_result/8778411d-c42b-4c98-b9ff-671b30429c19 HTTP/1.1[0m" 500 -
+2021-09-20 06:20:47,848 - werkzeug - INFO - 10645 - 127.0.0.1 - - [20/Sep/2021 06:20:47] "[35m[1mGET /api/v1/cvparser/batch/task_result/8778411d-c42b-4c98-b9ff-671b30429c19 HTTP/1.1[0m" 500 -
+2021-09-20 06:20:50,943 - werkzeug - INFO - 10645 - 127.0.0.1 - - [20/Sep/2021 06:20:50] "[35m[1mGET /api/v1/cvparser/batch/task_result/8778411d-c42b-4c98-b9ff-671b30429c19 HTTP/1.1[0m" 500 -
+2021-09-20 06:20:54,045 - werkzeug - INFO - 10645 - 127.0.0.1 - - [20/Sep/2021 06:20:54] "[35m[1mGET /api/v1/cvparser/batch/task_result/8778411d-c42b-4c98-b9ff-671b30429c19 HTTP/1.1[0m" 500 -
+2021-09-20 06:20:57,148 - werkzeug - INFO - 10645 - 127.0.0.1 - - [20/Sep/2021 06:20:57] "[35m[1mGET /api/v1/cvparser/batch/task_result/8778411d-c42b-4c98-b9ff-671b30429c19 HTTP/1.1[0m" 500 -
+2021-09-20 06:21:00,246 - werkzeug - INFO - 10645 - 127.0.0.1 - - [20/Sep/2021 06:21:00] "[35m[1mGET /api/v1/cvparser/batch/task_result/8778411d-c42b-4c98-b9ff-671b30429c19 HTTP/1.1[0m" 500 -
+2021-09-20 06:21:03,340 - werkzeug - INFO - 10645 - 127.0.0.1 - - [20/Sep/2021 06:21:03] "[35m[1mGET /api/v1/cvparser/batch/task_result/8778411d-c42b-4c98-b9ff-671b30429c19 HTTP/1.1[0m" 500 -
+2021-09-20 06:21:06,445 - werkzeug - INFO - 10645 - 127.0.0.1 - - [20/Sep/2021 06:21:06] "[35m[1mGET /api/v1/cvparser/batch/task_result/8778411d-c42b-4c98-b9ff-671b30429c19 HTTP/1.1[0m" 500 -
+2021-09-20 06:21:09,547 - werkzeug - INFO - 10645 - 127.0.0.1 - - [20/Sep/2021 06:21:09] "[35m[1mGET /api/v1/cvparser/batch/task_result/8778411d-c42b-4c98-b9ff-671b30429c19 HTTP/1.1[0m" 500 -
+2021-09-20 06:21:12,650 - werkzeug - INFO - 10645 - 127.0.0.1 - - [20/Sep/2021 06:21:12] "[35m[1mGET /api/v1/cvparser/batch/task_result/8778411d-c42b-4c98-b9ff-671b30429c19 HTTP/1.1[0m" 500 -
+2021-09-20 06:21:13,932 - werkzeug - INFO - 10645 -  * Detected change in '/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/flask_app_batch.py', reloading
+2021-09-20 06:21:13,992 - werkzeug - INFO - 8630 -  * Restarting with stat
+2021-09-20 06:21:16,014 - werkzeug - WARNING - 11446 -  * Debugger is active!
+2021-09-20 06:21:16,015 - werkzeug - INFO - 11446 -  * Debugger PIN: 141-963-743
+2021-09-20 06:21:17,335 - werkzeug - INFO - 11446 - 127.0.0.1 - - [20/Sep/2021 06:21:17] "[35m[1mGET /api/v1/cvparser/batch/task_result/8778411d-c42b-4c98-b9ff-671b30429c19 HTTP/1.1[0m" 500 -
+2021-09-20 06:21:20,440 - werkzeug - INFO - 11446 - 127.0.0.1 - - [20/Sep/2021 06:21:20] "[35m[1mGET /api/v1/cvparser/batch/task_result/8778411d-c42b-4c98-b9ff-671b30429c19 HTTP/1.1[0m" 500 -
+2021-09-20 06:21:23,531 - werkzeug - INFO - 11446 - 127.0.0.1 - - [20/Sep/2021 06:21:23] "[35m[1mGET /api/v1/cvparser/batch/task_result/8778411d-c42b-4c98-b9ff-671b30429c19 HTTP/1.1[0m" 500 -
+2021-09-20 06:21:26,637 - werkzeug - INFO - 11446 - 127.0.0.1 - - [20/Sep/2021 06:21:26] "[35m[1mGET /api/v1/cvparser/batch/task_result/8778411d-c42b-4c98-b9ff-671b30429c19 HTTP/1.1[0m" 500 -
+2021-09-20 06:21:29,728 - werkzeug - INFO - 11446 - 127.0.0.1 - - [20/Sep/2021 06:21:29] "[35m[1mGET /api/v1/cvparser/batch/task_result/8778411d-c42b-4c98-b9ff-671b30429c19 HTTP/1.1[0m" 500 -
+2021-09-20 06:21:32,829 - werkzeug - INFO - 11446 - 127.0.0.1 - - [20/Sep/2021 06:21:32] "[35m[1mGET /api/v1/cvparser/batch/task_result/8778411d-c42b-4c98-b9ff-671b30429c19 HTTP/1.1[0m" 500 -
+2021-09-20 06:21:35,910 - werkzeug - INFO - 11446 - 127.0.0.1 - - [20/Sep/2021 06:21:35] "[35m[1mGET /api/v1/cvparser/batch/task_result/8778411d-c42b-4c98-b9ff-671b30429c19 HTTP/1.1[0m" 500 -
+2021-09-20 06:21:39,014 - werkzeug - INFO - 11446 - 127.0.0.1 - - [20/Sep/2021 06:21:39] "[35m[1mGET /api/v1/cvparser/batch/task_result/8778411d-c42b-4c98-b9ff-671b30429c19 HTTP/1.1[0m" 500 -
+2021-09-20 06:21:42,095 - werkzeug - INFO - 11446 - 127.0.0.1 - - [20/Sep/2021 06:21:42] "[35m[1mGET /api/v1/cvparser/batch/task_result/8778411d-c42b-4c98-b9ff-671b30429c19 HTTP/1.1[0m" 500 -
+2021-09-20 06:21:45,197 - werkzeug - INFO - 11446 - 127.0.0.1 - - [20/Sep/2021 06:21:45] "[35m[1mGET /api/v1/cvparser/batch/task_result/8778411d-c42b-4c98-b9ff-671b30429c19 HTTP/1.1[0m" 500 -
+2021-09-20 06:21:48,297 - werkzeug - INFO - 11446 - 127.0.0.1 - - [20/Sep/2021 06:21:48] "[35m[1mGET /api/v1/cvparser/batch/task_result/8778411d-c42b-4c98-b9ff-671b30429c19 HTTP/1.1[0m" 500 -
+2021-09-20 06:21:51,393 - werkzeug - INFO - 11446 - 127.0.0.1 - - [20/Sep/2021 06:21:51] "[35m[1mGET /api/v1/cvparser/batch/task_result/8778411d-c42b-4c98-b9ff-671b30429c19 HTTP/1.1[0m" 500 -
+2021-09-20 06:21:54,496 - werkzeug - INFO - 11446 - 127.0.0.1 - - [20/Sep/2021 06:21:54] "[35m[1mGET /api/v1/cvparser/batch/task_result/8778411d-c42b-4c98-b9ff-671b30429c19 HTTP/1.1[0m" 500 -
+2021-09-20 06:21:57,589 - werkzeug - INFO - 11446 - 127.0.0.1 - - [20/Sep/2021 06:21:57] "[35m[1mGET /api/v1/cvparser/batch/task_result/8778411d-c42b-4c98-b9ff-671b30429c19 HTTP/1.1[0m" 500 -
+2021-09-20 06:22:00,690 - werkzeug - INFO - 11446 - 127.0.0.1 - - [20/Sep/2021 06:22:00] "[35m[1mGET /api/v1/cvparser/batch/task_result/8778411d-c42b-4c98-b9ff-671b30429c19 HTTP/1.1[0m" 500 -
+2021-09-20 06:22:03,769 - werkzeug - INFO - 11446 - 127.0.0.1 - - [20/Sep/2021 06:22:03] "[35m[1mGET /api/v1/cvparser/batch/task_result/8778411d-c42b-4c98-b9ff-671b30429c19 HTTP/1.1[0m" 500 -
+2021-09-20 06:22:06,870 - werkzeug - INFO - 11446 - 127.0.0.1 - - [20/Sep/2021 06:22:06] "[35m[1mGET /api/v1/cvparser/batch/task_result/8778411d-c42b-4c98-b9ff-671b30429c19 HTTP/1.1[0m" 500 -
+2021-09-20 06:22:09,967 - werkzeug - INFO - 11446 - 127.0.0.1 - - [20/Sep/2021 06:22:09] "[35m[1mGET /api/v1/cvparser/batch/task_result/8778411d-c42b-4c98-b9ff-671b30429c19 HTTP/1.1[0m" 500 -
+2021-09-20 06:22:13,060 - werkzeug - INFO - 11446 - 127.0.0.1 - - [20/Sep/2021 06:22:13] "[35m[1mGET /api/v1/cvparser/batch/task_result/8778411d-c42b-4c98-b9ff-671b30429c19 HTTP/1.1[0m" 500 -
+2021-09-20 06:22:16,161 - werkzeug - INFO - 11446 - 127.0.0.1 - - [20/Sep/2021 06:22:16] "[35m[1mGET /api/v1/cvparser/batch/task_result/8778411d-c42b-4c98-b9ff-671b30429c19 HTTP/1.1[0m" 500 -
+2021-09-20 06:22:19,253 - werkzeug - INFO - 11446 - 127.0.0.1 - - [20/Sep/2021 06:22:19] "[35m[1mGET /api/v1/cvparser/batch/task_result/8778411d-c42b-4c98-b9ff-671b30429c19 HTTP/1.1[0m" 500 -
+2021-09-20 06:22:22,358 - werkzeug - INFO - 11446 - 127.0.0.1 - - [20/Sep/2021 06:22:22] "[35m[1mGET /api/v1/cvparser/batch/task_result/8778411d-c42b-4c98-b9ff-671b30429c19 HTTP/1.1[0m" 500 -
+2021-09-20 06:22:25,445 - werkzeug - INFO - 11446 - 127.0.0.1 - - [20/Sep/2021 06:22:25] "[35m[1mGET /api/v1/cvparser/batch/task_result/8778411d-c42b-4c98-b9ff-671b30429c19 HTTP/1.1[0m" 500 -
+2021-09-20 06:22:28,554 - werkzeug - INFO - 11446 - 127.0.0.1 - - [20/Sep/2021 06:22:28] "[35m[1mGET /api/v1/cvparser/batch/task_result/8778411d-c42b-4c98-b9ff-671b30429c19 HTTP/1.1[0m" 500 -
+2021-09-20 06:22:31,636 - werkzeug - INFO - 11446 - 127.0.0.1 - - [20/Sep/2021 06:22:31] "[35m[1mGET /api/v1/cvparser/batch/task_result/8778411d-c42b-4c98-b9ff-671b30429c19 HTTP/1.1[0m" 500 -
+2021-09-20 06:22:34,726 - werkzeug - INFO - 11446 - 127.0.0.1 - - [20/Sep/2021 06:22:34] "[35m[1mGET /api/v1/cvparser/batch/task_result/8778411d-c42b-4c98-b9ff-671b30429c19 HTTP/1.1[0m" 500 -
+2021-09-20 06:22:37,823 - werkzeug - INFO - 11446 - 127.0.0.1 - - [20/Sep/2021 06:22:37] "[35m[1mGET /api/v1/cvparser/batch/task_result/8778411d-c42b-4c98-b9ff-671b30429c19 HTTP/1.1[0m" 500 -
+2021-09-20 06:22:40,906 - werkzeug - INFO - 11446 - 127.0.0.1 - - [20/Sep/2021 06:22:40] "[35m[1mGET /api/v1/cvparser/batch/task_result/8778411d-c42b-4c98-b9ff-671b30429c19 HTTP/1.1[0m" 500 -
+2021-09-20 06:22:44,017 - werkzeug - INFO - 11446 - 127.0.0.1 - - [20/Sep/2021 06:22:44] "[35m[1mGET /api/v1/cvparser/batch/task_result/8778411d-c42b-4c98-b9ff-671b30429c19 HTTP/1.1[0m" 500 -
+2021-09-20 06:22:47,097 - werkzeug - INFO - 11446 - 127.0.0.1 - - [20/Sep/2021 06:22:47] "[35m[1mGET /api/v1/cvparser/batch/task_result/8778411d-c42b-4c98-b9ff-671b30429c19 HTTP/1.1[0m" 500 -
+2021-09-20 06:22:50,183 - werkzeug - INFO - 11446 - 127.0.0.1 - - [20/Sep/2021 06:22:50] "[35m[1mGET /api/v1/cvparser/batch/task_result/8778411d-c42b-4c98-b9ff-671b30429c19 HTTP/1.1[0m" 500 -
+2021-09-20 06:22:53,261 - werkzeug - INFO - 11446 - 127.0.0.1 - - [20/Sep/2021 06:22:53] "[35m[1mGET /api/v1/cvparser/batch/task_result/8778411d-c42b-4c98-b9ff-671b30429c19 HTTP/1.1[0m" 500 -
+2021-09-20 06:22:56,362 - werkzeug - INFO - 11446 - 127.0.0.1 - - [20/Sep/2021 06:22:56] "[35m[1mGET /api/v1/cvparser/batch/task_result/8778411d-c42b-4c98-b9ff-671b30429c19 HTTP/1.1[0m" 500 -
+2021-09-20 06:22:59,461 - werkzeug - INFO - 11446 - 127.0.0.1 - - [20/Sep/2021 06:22:59] "[35m[1mGET /api/v1/cvparser/batch/task_result/8778411d-c42b-4c98-b9ff-671b30429c19 HTTP/1.1[0m" 500 -
+2021-09-20 06:23:02,553 - werkzeug - INFO - 11446 - 127.0.0.1 - - [20/Sep/2021 06:23:02] "[35m[1mGET /api/v1/cvparser/batch/task_result/8778411d-c42b-4c98-b9ff-671b30429c19 HTTP/1.1[0m" 500 -
+2021-09-20 06:23:05,657 - werkzeug - INFO - 11446 - 127.0.0.1 - - [20/Sep/2021 06:23:05] "[35m[1mGET /api/v1/cvparser/batch/task_result/8778411d-c42b-4c98-b9ff-671b30429c19 HTTP/1.1[0m" 500 -
+2021-09-20 06:23:08,741 - werkzeug - INFO - 11446 - 127.0.0.1 - - [20/Sep/2021 06:23:08] "[35m[1mGET /api/v1/cvparser/batch/task_result/8778411d-c42b-4c98-b9ff-671b30429c19 HTTP/1.1[0m" 500 -
+2021-09-20 06:23:11,862 - werkzeug - INFO - 11446 - 127.0.0.1 - - [20/Sep/2021 06:23:11] "[35m[1mGET /api/v1/cvparser/batch/task_result/8778411d-c42b-4c98-b9ff-671b30429c19 HTTP/1.1[0m" 500 -
+2021-09-20 06:23:14,943 - werkzeug - INFO - 11446 - 127.0.0.1 - - [20/Sep/2021 06:23:14] "[35m[1mGET /api/v1/cvparser/batch/task_result/8778411d-c42b-4c98-b9ff-671b30429c19 HTTP/1.1[0m" 500 -
+2021-09-20 06:23:18,047 - werkzeug - INFO - 11446 - 127.0.0.1 - - [20/Sep/2021 06:23:18] "[35m[1mGET /api/v1/cvparser/batch/task_result/8778411d-c42b-4c98-b9ff-671b30429c19 HTTP/1.1[0m" 500 -
+2021-09-20 06:23:21,148 - werkzeug - INFO - 11446 - 127.0.0.1 - - [20/Sep/2021 06:23:21] "[35m[1mGET /api/v1/cvparser/batch/task_result/8778411d-c42b-4c98-b9ff-671b30429c19 HTTP/1.1[0m" 500 -
+2021-09-20 06:23:24,230 - werkzeug - INFO - 11446 - 127.0.0.1 - - [20/Sep/2021 06:23:24] "[35m[1mGET /api/v1/cvparser/batch/task_result/8778411d-c42b-4c98-b9ff-671b30429c19 HTTP/1.1[0m" 500 -
+2021-09-20 06:23:27,329 - werkzeug - INFO - 11446 - 127.0.0.1 - - [20/Sep/2021 06:23:27] "[35m[1mGET /api/v1/cvparser/batch/task_result/8778411d-c42b-4c98-b9ff-671b30429c19 HTTP/1.1[0m" 500 -
+2021-09-20 06:23:30,420 - werkzeug - INFO - 11446 - 127.0.0.1 - - [20/Sep/2021 06:23:30] "[35m[1mGET /api/v1/cvparser/batch/task_result/8778411d-c42b-4c98-b9ff-671b30429c19 HTTP/1.1[0m" 500 -
+2021-09-20 06:23:33,523 - werkzeug - INFO - 11446 - 127.0.0.1 - - [20/Sep/2021 06:23:33] "[35m[1mGET /api/v1/cvparser/batch/task_result/8778411d-c42b-4c98-b9ff-671b30429c19 HTTP/1.1[0m" 500 -
+2021-09-20 06:23:36,607 - werkzeug - INFO - 11446 - 127.0.0.1 - - [20/Sep/2021 06:23:36] "[35m[1mGET /api/v1/cvparser/batch/task_result/8778411d-c42b-4c98-b9ff-671b30429c19 HTTP/1.1[0m" 500 -
+2021-09-20 06:23:39,713 - werkzeug - INFO - 11446 - 127.0.0.1 - - [20/Sep/2021 06:23:39] "[35m[1mGET /api/v1/cvparser/batch/task_result/8778411d-c42b-4c98-b9ff-671b30429c19 HTTP/1.1[0m" 500 -
+2021-09-20 06:23:42,816 - werkzeug - INFO - 11446 - 127.0.0.1 - - [20/Sep/2021 06:23:42] "[35m[1mGET /api/v1/cvparser/batch/task_result/8778411d-c42b-4c98-b9ff-671b30429c19 HTTP/1.1[0m" 500 -
+2021-09-20 06:23:43,133 - werkzeug - INFO - 11446 -  * Detected change in '/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/flask_app_batch.py', reloading
+2021-09-20 06:23:43,217 - werkzeug - INFO - 8630 -  * Restarting with stat
+2021-09-20 06:23:45,255 - werkzeug - WARNING - 12507 -  * Debugger is active!
+2021-09-20 06:23:45,255 - werkzeug - INFO - 12507 -  * Debugger PIN: 141-963-743
+2021-09-20 06:23:46,889 - werkzeug - INFO - 12507 - 127.0.0.1 - - [20/Sep/2021 06:23:46] "[37mGET /api/v1/cvparser/batch/task_result/8778411d-c42b-4c98-b9ff-671b30429c19 HTTP/1.1[0m" 200 -
+2021-09-20 06:24:41,300 - werkzeug - INFO - 12507 -  * Detected change in '/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/flask_app_batch.py', reloading
+2021-09-20 06:24:41,341 - werkzeug - INFO - 8630 -  * Restarting with stat
+2021-09-20 06:24:43,377 - werkzeug - WARNING - 12587 -  * Debugger is active!
+2021-09-20 06:24:43,378 - werkzeug - INFO - 12587 -  * Debugger PIN: 141-963-743
+2021-09-20 06:24:44,713 - flask_app_batch - INFO - 12587 - <celery.backends.redis.RedisBackend object at 0x7f5d63b18100>
+2021-09-20 06:24:44,715 - werkzeug - INFO - 12587 - 127.0.0.1 - - [20/Sep/2021 06:24:44] "[37mPOST /api/v1/cvparser/batch HTTP/1.1[0m" 200 -
+2021-09-20 06:24:44,718 - werkzeug - INFO - 12587 - 127.0.0.1 - - [20/Sep/2021 06:24:44] "[37mGET /api/v1/cvparser/batch/task_result/0702a0c5-29ad-4940-9bd4-8728603649fc HTTP/1.1[0m" 200 -
+2021-09-20 06:24:44,721 - werkzeug - INFO - 12587 - 127.0.0.1 - - [20/Sep/2021 06:24:44] "[37mGET /api/v1/cvparser/batch/task_result/0702a0c5-29ad-4940-9bd4-8728603649fc HTTP/1.1[0m" 200 -
+2021-09-20 06:24:47,728 - werkzeug - INFO - 12587 - 127.0.0.1 - - [20/Sep/2021 06:24:47] "[37mGET /api/v1/cvparser/batch/task_result/0702a0c5-29ad-4940-9bd4-8728603649fc HTTP/1.1[0m" 200 -
+2021-09-20 06:24:50,734 - werkzeug - INFO - 12587 - 127.0.0.1 - - [20/Sep/2021 06:24:50] "[37mGET /api/v1/cvparser/batch/task_result/0702a0c5-29ad-4940-9bd4-8728603649fc HTTP/1.1[0m" 200 -
+2021-09-20 06:24:53,741 - werkzeug - INFO - 12587 - 127.0.0.1 - - [20/Sep/2021 06:24:53] "[37mGET /api/v1/cvparser/batch/task_result/0702a0c5-29ad-4940-9bd4-8728603649fc HTTP/1.1[0m" 200 -
+2021-09-20 06:24:59,945 - werkzeug - INFO - 12587 -  * Detected change in '/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/flask_app_batch.py', reloading
+2021-09-20 06:24:59,982 - werkzeug - INFO - 8630 -  * Restarting with stat
+2021-09-20 06:25:01,932 - werkzeug - WARNING - 12856 -  * Debugger is active!
+2021-09-20 06:25:01,932 - werkzeug - INFO - 12856 -  * Debugger PIN: 141-963-743
+2021-09-20 06:29:16,746 - werkzeug - INFO - 12856 -  * Detected change in '/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/flask_app_batch.py', reloading
+2021-09-20 06:29:16,770 - werkzeug - INFO - 8630 -  * Restarting with stat
+2021-09-20 06:29:18,779 - werkzeug - WARNING - 13092 -  * Debugger is active!
+2021-09-20 06:29:18,779 - werkzeug - INFO - 13092 -  * Debugger PIN: 141-963-743
+2021-09-20 06:29:35,443 - flask_app_batch - INFO - 13092 - <celery.backends.redis.RedisBackend object at 0x7f1f44103100>
+2021-09-20 06:29:35,444 - werkzeug - INFO - 13092 - 127.0.0.1 - - [20/Sep/2021 06:29:35] "[37mPOST /api/v1/cvparser/batch HTTP/1.1[0m" 200 -
+2021-09-20 06:29:35,461 - werkzeug - INFO - 13092 - 127.0.0.1 - - [20/Sep/2021 06:29:35] "[37mGET /api/v1/cvparser/batch/task_result/973cd354-6dea-4fe4-ae1d-f9cb14c0e0c1 HTTP/1.1[0m" 200 -
+2021-09-20 06:29:53,136 - flask_app_batch - INFO - 13092 - <celery.backends.redis.RedisBackend object at 0x7f1f441031c0>
+2021-09-20 06:29:53,137 - werkzeug - INFO - 13092 - 127.0.0.1 - - [20/Sep/2021 06:29:53] "[37mPOST /api/v1/cvparser/batch HTTP/1.1[0m" 200 -
+2021-09-20 06:29:53,152 - werkzeug - INFO - 13092 - 127.0.0.1 - - [20/Sep/2021 06:29:53] "[37mGET /api/v1/cvparser/batch/task_result/8ba52168-5c25-4253-a29b-850e2ecf5ada HTTP/1.1[0m" 200 -
+2021-09-20 06:29:53,156 - batch_parsing - ERROR - 13092 - Error deleting parsed resume file- None.zip
+Traceback (most recent call last):
+  File "/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/flask_app_batch.py", line 147, in deleteZipUnzipFiles
+    if os.path.isfile(zip_file_path):
+  File "/usr/lib/python3.8/genericpath.py", line 30, in isfile
+    st = os.stat(path)
+TypeError: stat: path should be string, bytes, os.PathLike or integer, not NoneType
+2021-09-20 06:29:53,160 - werkzeug - INFO - 13092 - 127.0.0.1 - - [20/Sep/2021 06:29:53] "[37mGET /api/v1/cvparser/batch/task_result/8ba52168-5c25-4253-a29b-850e2ecf5ada HTTP/1.1[0m" 200 -
+2021-09-20 06:29:56,167 - batch_parsing - ERROR - 13092 - Error deleting parsed resume file- None.zip
+Traceback (most recent call last):
+  File "/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/flask_app_batch.py", line 147, in deleteZipUnzipFiles
+    if os.path.isfile(zip_file_path):
+  File "/usr/lib/python3.8/genericpath.py", line 30, in isfile
+    st = os.stat(path)
+TypeError: stat: path should be string, bytes, os.PathLike or integer, not NoneType
+2021-09-20 06:29:56,169 - werkzeug - INFO - 13092 - 127.0.0.1 - - [20/Sep/2021 06:29:56] "[37mGET /api/v1/cvparser/batch/task_result/8ba52168-5c25-4253-a29b-850e2ecf5ada HTTP/1.1[0m" 200 -
+2021-09-20 06:29:59,176 - batch_parsing - ERROR - 13092 - Error deleting parsed resume file- None.zip
+Traceback (most recent call last):
+  File "/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/flask_app_batch.py", line 147, in deleteZipUnzipFiles
+    if os.path.isfile(zip_file_path):
+  File "/usr/lib/python3.8/genericpath.py", line 30, in isfile
+    st = os.stat(path)
+TypeError: stat: path should be string, bytes, os.PathLike or integer, not NoneType
+2021-09-20 06:29:59,178 - werkzeug - INFO - 13092 - 127.0.0.1 - - [20/Sep/2021 06:29:59] "[37mGET /api/v1/cvparser/batch/task_result/8ba52168-5c25-4253-a29b-850e2ecf5ada HTTP/1.1[0m" 200 -
+2021-09-20 06:30:02,185 - batch_parsing - ERROR - 13092 - Error deleting parsed resume file- None.zip
+Traceback (most recent call last):
+  File "/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/flask_app_batch.py", line 147, in deleteZipUnzipFiles
+    if os.path.isfile(zip_file_path):
+  File "/usr/lib/python3.8/genericpath.py", line 30, in isfile
+    st = os.stat(path)
+TypeError: stat: path should be string, bytes, os.PathLike or integer, not NoneType
+2021-09-20 06:30:02,187 - werkzeug - INFO - 13092 - 127.0.0.1 - - [20/Sep/2021 06:30:02] "[37mGET /api/v1/cvparser/batch/task_result/8ba52168-5c25-4253-a29b-850e2ecf5ada HTTP/1.1[0m" 200 -
+2021-09-20 06:30:05,191 - batch_parsing - ERROR - 13092 - Error deleting parsed resume file- None.zip
+Traceback (most recent call last):
+  File "/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/flask_app_batch.py", line 147, in deleteZipUnzipFiles
+    if os.path.isfile(zip_file_path):
+  File "/usr/lib/python3.8/genericpath.py", line 30, in isfile
+    st = os.stat(path)
+TypeError: stat: path should be string, bytes, os.PathLike or integer, not NoneType
+2021-09-20 06:30:05,193 - werkzeug - INFO - 13092 - 127.0.0.1 - - [20/Sep/2021 06:30:05] "[37mGET /api/v1/cvparser/batch/task_result/8ba52168-5c25-4253-a29b-850e2ecf5ada HTTP/1.1[0m" 200 -
+2021-09-20 06:30:08,200 - batch_parsing - ERROR - 13092 - Error deleting parsed resume file- None.zip
+Traceback (most recent call last):
+  File "/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/flask_app_batch.py", line 147, in deleteZipUnzipFiles
+    if os.path.isfile(zip_file_path):
+  File "/usr/lib/python3.8/genericpath.py", line 30, in isfile
+    st = os.stat(path)
+TypeError: stat: path should be string, bytes, os.PathLike or integer, not NoneType
+2021-09-20 06:30:08,201 - werkzeug - INFO - 13092 - 127.0.0.1 - - [20/Sep/2021 06:30:08] "[37mGET /api/v1/cvparser/batch/task_result/8ba52168-5c25-4253-a29b-850e2ecf5ada HTTP/1.1[0m" 200 -
+2021-09-20 06:30:11,208 - batch_parsing - ERROR - 13092 - Error deleting parsed resume file- None.zip
+Traceback (most recent call last):
+  File "/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/flask_app_batch.py", line 147, in deleteZipUnzipFiles
+    if os.path.isfile(zip_file_path):
+  File "/usr/lib/python3.8/genericpath.py", line 30, in isfile
+    st = os.stat(path)
+TypeError: stat: path should be string, bytes, os.PathLike or integer, not NoneType
+2021-09-20 06:30:11,210 - werkzeug - INFO - 13092 - 127.0.0.1 - - [20/Sep/2021 06:30:11] "[37mGET /api/v1/cvparser/batch/task_result/8ba52168-5c25-4253-a29b-850e2ecf5ada HTTP/1.1[0m" 200 -
+2021-09-20 06:30:14,218 - batch_parsing - ERROR - 13092 - Error deleting parsed resume file- None.zip
+Traceback (most recent call last):
+  File "/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/flask_app_batch.py", line 147, in deleteZipUnzipFiles
+    if os.path.isfile(zip_file_path):
+  File "/usr/lib/python3.8/genericpath.py", line 30, in isfile
+    st = os.stat(path)
+TypeError: stat: path should be string, bytes, os.PathLike or integer, not NoneType
+2021-09-20 06:30:14,220 - werkzeug - INFO - 13092 - 127.0.0.1 - - [20/Sep/2021 06:30:14] "[37mGET /api/v1/cvparser/batch/task_result/8ba52168-5c25-4253-a29b-850e2ecf5ada HTTP/1.1[0m" 200 -
+2021-09-20 06:30:17,227 - batch_parsing - ERROR - 13092 - Error deleting parsed resume file- None.zip
+Traceback (most recent call last):
+  File "/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/flask_app_batch.py", line 147, in deleteZipUnzipFiles
+    if os.path.isfile(zip_file_path):
+  File "/usr/lib/python3.8/genericpath.py", line 30, in isfile
+    st = os.stat(path)
+TypeError: stat: path should be string, bytes, os.PathLike or integer, not NoneType
+2021-09-20 06:30:17,229 - werkzeug - INFO - 13092 - 127.0.0.1 - - [20/Sep/2021 06:30:17] "[37mGET /api/v1/cvparser/batch/task_result/8ba52168-5c25-4253-a29b-850e2ecf5ada HTTP/1.1[0m" 200 -
+2021-09-20 06:30:20,236 - batch_parsing - ERROR - 13092 - Error deleting parsed resume file- None.zip
+Traceback (most recent call last):
+  File "/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/flask_app_batch.py", line 147, in deleteZipUnzipFiles
+    if os.path.isfile(zip_file_path):
+  File "/usr/lib/python3.8/genericpath.py", line 30, in isfile
+    st = os.stat(path)
+TypeError: stat: path should be string, bytes, os.PathLike or integer, not NoneType
+2021-09-20 06:30:20,237 - werkzeug - INFO - 13092 - 127.0.0.1 - - [20/Sep/2021 06:30:20] "[37mGET /api/v1/cvparser/batch/task_result/8ba52168-5c25-4253-a29b-850e2ecf5ada HTTP/1.1[0m" 200 -
+2021-09-20 06:30:23,244 - batch_parsing - ERROR - 13092 - Error deleting parsed resume file- None.zip
+Traceback (most recent call last):
+  File "/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/flask_app_batch.py", line 147, in deleteZipUnzipFiles
+    if os.path.isfile(zip_file_path):
+  File "/usr/lib/python3.8/genericpath.py", line 30, in isfile
+    st = os.stat(path)
+TypeError: stat: path should be string, bytes, os.PathLike or integer, not NoneType
+2021-09-20 06:30:23,246 - werkzeug - INFO - 13092 - 127.0.0.1 - - [20/Sep/2021 06:30:23] "[37mGET /api/v1/cvparser/batch/task_result/8ba52168-5c25-4253-a29b-850e2ecf5ada HTTP/1.1[0m" 200 -
+2021-09-20 06:30:26,253 - batch_parsing - ERROR - 13092 - Error deleting parsed resume file- None.zip
+Traceback (most recent call last):
+  File "/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/flask_app_batch.py", line 147, in deleteZipUnzipFiles
+    if os.path.isfile(zip_file_path):
+  File "/usr/lib/python3.8/genericpath.py", line 30, in isfile
+    st = os.stat(path)
+TypeError: stat: path should be string, bytes, os.PathLike or integer, not NoneType
+2021-09-20 06:30:26,254 - werkzeug - INFO - 13092 - 127.0.0.1 - - [20/Sep/2021 06:30:26] "[37mGET /api/v1/cvparser/batch/task_result/8ba52168-5c25-4253-a29b-850e2ecf5ada HTTP/1.1[0m" 200 -
+2021-09-20 06:30:29,261 - batch_parsing - ERROR - 13092 - Error deleting parsed resume file- None.zip
+Traceback (most recent call last):
+  File "/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/flask_app_batch.py", line 147, in deleteZipUnzipFiles
+    if os.path.isfile(zip_file_path):
+  File "/usr/lib/python3.8/genericpath.py", line 30, in isfile
+    st = os.stat(path)
+TypeError: stat: path should be string, bytes, os.PathLike or integer, not NoneType
+2021-09-20 06:30:29,263 - werkzeug - INFO - 13092 - 127.0.0.1 - - [20/Sep/2021 06:30:29] "[37mGET /api/v1/cvparser/batch/task_result/8ba52168-5c25-4253-a29b-850e2ecf5ada HTTP/1.1[0m" 200 -
+2021-09-20 06:30:32,269 - batch_parsing - ERROR - 13092 - Error deleting parsed resume file- None.zip
+Traceback (most recent call last):
+  File "/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/flask_app_batch.py", line 147, in deleteZipUnzipFiles
+    if os.path.isfile(zip_file_path):
+  File "/usr/lib/python3.8/genericpath.py", line 30, in isfile
+    st = os.stat(path)
+TypeError: stat: path should be string, bytes, os.PathLike or integer, not NoneType
+2021-09-20 06:30:32,271 - werkzeug - INFO - 13092 - 127.0.0.1 - - [20/Sep/2021 06:30:32] "[37mGET /api/v1/cvparser/batch/task_result/8ba52168-5c25-4253-a29b-850e2ecf5ada HTTP/1.1[0m" 200 -
+2021-09-20 06:30:35,275 - batch_parsing - ERROR - 13092 - Error deleting parsed resume file- None.zip
+Traceback (most recent call last):
+  File "/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/flask_app_batch.py", line 147, in deleteZipUnzipFiles
+    if os.path.isfile(zip_file_path):
+  File "/usr/lib/python3.8/genericpath.py", line 30, in isfile
+    st = os.stat(path)
+TypeError: stat: path should be string, bytes, os.PathLike or integer, not NoneType
+2021-09-20 06:30:35,277 - werkzeug - INFO - 13092 - 127.0.0.1 - - [20/Sep/2021 06:30:35] "[37mGET /api/v1/cvparser/batch/task_result/8ba52168-5c25-4253-a29b-850e2ecf5ada HTTP/1.1[0m" 200 -
+2021-09-20 06:30:38,283 - batch_parsing - ERROR - 13092 - Error deleting parsed resume file- None.zip
+Traceback (most recent call last):
+  File "/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/flask_app_batch.py", line 147, in deleteZipUnzipFiles
+    if os.path.isfile(zip_file_path):
+  File "/usr/lib/python3.8/genericpath.py", line 30, in isfile
+    st = os.stat(path)
+TypeError: stat: path should be string, bytes, os.PathLike or integer, not NoneType
+2021-09-20 06:30:38,285 - werkzeug - INFO - 13092 - 127.0.0.1 - - [20/Sep/2021 06:30:38] "[37mGET /api/v1/cvparser/batch/task_result/8ba52168-5c25-4253-a29b-850e2ecf5ada HTTP/1.1[0m" 200 -
+2021-09-20 06:30:41,289 - batch_parsing - ERROR - 13092 - Error deleting parsed resume file- None.zip
+Traceback (most recent call last):
+  File "/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/flask_app_batch.py", line 147, in deleteZipUnzipFiles
+    if os.path.isfile(zip_file_path):
+  File "/usr/lib/python3.8/genericpath.py", line 30, in isfile
+    st = os.stat(path)
+TypeError: stat: path should be string, bytes, os.PathLike or integer, not NoneType
+2021-09-20 06:30:41,291 - werkzeug - INFO - 13092 - 127.0.0.1 - - [20/Sep/2021 06:30:41] "[37mGET /api/v1/cvparser/batch/task_result/8ba52168-5c25-4253-a29b-850e2ecf5ada HTTP/1.1[0m" 200 -
+2021-09-20 06:30:44,297 - batch_parsing - ERROR - 13092 - Error deleting parsed resume file- None.zip
+Traceback (most recent call last):
+  File "/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/flask_app_batch.py", line 147, in deleteZipUnzipFiles
+    if os.path.isfile(zip_file_path):
+  File "/usr/lib/python3.8/genericpath.py", line 30, in isfile
+    st = os.stat(path)
+TypeError: stat: path should be string, bytes, os.PathLike or integer, not NoneType
+2021-09-20 06:30:44,299 - werkzeug - INFO - 13092 - 127.0.0.1 - - [20/Sep/2021 06:30:44] "[37mGET /api/v1/cvparser/batch/task_result/8ba52168-5c25-4253-a29b-850e2ecf5ada HTTP/1.1[0m" 200 -
+2021-09-20 06:30:47,306 - batch_parsing - ERROR - 13092 - Error deleting parsed resume file- None.zip
+Traceback (most recent call last):
+  File "/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/flask_app_batch.py", line 147, in deleteZipUnzipFiles
+    if os.path.isfile(zip_file_path):
+  File "/usr/lib/python3.8/genericpath.py", line 30, in isfile
+    st = os.stat(path)
+TypeError: stat: path should be string, bytes, os.PathLike or integer, not NoneType
+2021-09-20 06:30:47,307 - werkzeug - INFO - 13092 - 127.0.0.1 - - [20/Sep/2021 06:30:47] "[37mGET /api/v1/cvparser/batch/task_result/8ba52168-5c25-4253-a29b-850e2ecf5ada HTTP/1.1[0m" 200 -
+2021-09-20 06:30:50,311 - batch_parsing - ERROR - 13092 - Error deleting parsed resume file- None.zip
+Traceback (most recent call last):
+  File "/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/flask_app_batch.py", line 147, in deleteZipUnzipFiles
+    if os.path.isfile(zip_file_path):
+  File "/usr/lib/python3.8/genericpath.py", line 30, in isfile
+    st = os.stat(path)
+TypeError: stat: path should be string, bytes, os.PathLike or integer, not NoneType
+2021-09-20 06:30:50,313 - werkzeug - INFO - 13092 - 127.0.0.1 - - [20/Sep/2021 06:30:50] "[37mGET /api/v1/cvparser/batch/task_result/8ba52168-5c25-4253-a29b-850e2ecf5ada HTTP/1.1[0m" 200 -
+2021-09-20 06:30:53,320 - batch_parsing - ERROR - 13092 - Error deleting parsed resume file- None.zip
+Traceback (most recent call last):
+  File "/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/flask_app_batch.py", line 147, in deleteZipUnzipFiles
+    if os.path.isfile(zip_file_path):
+  File "/usr/lib/python3.8/genericpath.py", line 30, in isfile
+    st = os.stat(path)
+TypeError: stat: path should be string, bytes, os.PathLike or integer, not NoneType
+2021-09-20 06:30:53,322 - werkzeug - INFO - 13092 - 127.0.0.1 - - [20/Sep/2021 06:30:53] "[37mGET /api/v1/cvparser/batch/task_result/8ba52168-5c25-4253-a29b-850e2ecf5ada HTTP/1.1[0m" 200 -
+2021-09-20 06:30:56,329 - batch_parsing - ERROR - 13092 - Error deleting parsed resume file- None.zip
+Traceback (most recent call last):
+  File "/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/flask_app_batch.py", line 147, in deleteZipUnzipFiles
+    if os.path.isfile(zip_file_path):
+  File "/usr/lib/python3.8/genericpath.py", line 30, in isfile
+    st = os.stat(path)
+TypeError: stat: path should be string, bytes, os.PathLike or integer, not NoneType
+2021-09-20 06:30:56,330 - werkzeug - INFO - 13092 - 127.0.0.1 - - [20/Sep/2021 06:30:56] "[37mGET /api/v1/cvparser/batch/task_result/8ba52168-5c25-4253-a29b-850e2ecf5ada HTTP/1.1[0m" 200 -
+2021-09-20 06:30:59,337 - batch_parsing - ERROR - 13092 - Error deleting parsed resume file- None.zip
+Traceback (most recent call last):
+  File "/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/flask_app_batch.py", line 147, in deleteZipUnzipFiles
+    if os.path.isfile(zip_file_path):
+  File "/usr/lib/python3.8/genericpath.py", line 30, in isfile
+    st = os.stat(path)
+TypeError: stat: path should be string, bytes, os.PathLike or integer, not NoneType
+2021-09-20 06:30:59,339 - werkzeug - INFO - 13092 - 127.0.0.1 - - [20/Sep/2021 06:30:59] "[37mGET /api/v1/cvparser/batch/task_result/8ba52168-5c25-4253-a29b-850e2ecf5ada HTTP/1.1[0m" 200 -
+2021-09-20 06:31:02,346 - batch_parsing - ERROR - 13092 - Error deleting parsed resume file- None.zip
+Traceback (most recent call last):
+  File "/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/flask_app_batch.py", line 147, in deleteZipUnzipFiles
+    if os.path.isfile(zip_file_path):
+  File "/usr/lib/python3.8/genericpath.py", line 30, in isfile
+    st = os.stat(path)
+TypeError: stat: path should be string, bytes, os.PathLike or integer, not NoneType
+2021-09-20 06:31:02,347 - werkzeug - INFO - 13092 - 127.0.0.1 - - [20/Sep/2021 06:31:02] "[37mGET /api/v1/cvparser/batch/task_result/8ba52168-5c25-4253-a29b-850e2ecf5ada HTTP/1.1[0m" 200 -
+2021-09-20 06:31:05,354 - batch_parsing - ERROR - 13092 - Error deleting parsed resume file- None.zip
+Traceback (most recent call last):
+  File "/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/flask_app_batch.py", line 147, in deleteZipUnzipFiles
+    if os.path.isfile(zip_file_path):
+  File "/usr/lib/python3.8/genericpath.py", line 30, in isfile
+    st = os.stat(path)
+TypeError: stat: path should be string, bytes, os.PathLike or integer, not NoneType
+2021-09-20 06:31:05,356 - werkzeug - INFO - 13092 - 127.0.0.1 - - [20/Sep/2021 06:31:05] "[37mGET /api/v1/cvparser/batch/task_result/8ba52168-5c25-4253-a29b-850e2ecf5ada HTTP/1.1[0m" 200 -
+2021-09-20 06:31:34,120 - werkzeug - INFO - 13092 -  * Detected change in '/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/flask_app_batch.py', reloading
+2021-09-20 06:31:34,151 - werkzeug - INFO - 8630 -  * Restarting with stat
+2021-09-20 06:31:36,008 - werkzeug - WARNING - 14086 -  * Debugger is active!
+2021-09-20 06:31:36,009 - werkzeug - INFO - 14086 -  * Debugger PIN: 141-963-743
+2021-09-20 06:31:42,641 - flask_app_batch - INFO - 14086 - <celery.backends.redis.RedisBackend object at 0x7f4dfdf94070>
+2021-09-20 06:31:42,643 - werkzeug - INFO - 14086 - 127.0.0.1 - - [20/Sep/2021 06:31:42] "[37mPOST /api/v1/cvparser/batch HTTP/1.1[0m" 200 -
+2021-09-20 06:31:42,649 - werkzeug - INFO - 14086 - 127.0.0.1 - - [20/Sep/2021 06:31:42] "[37mGET /api/v1/cvparser/batch/task_result/7e68c657-54ce-47eb-8d77-725c3264ebb1 HTTP/1.1[0m" 200 -
+2021-09-20 06:31:42,664 - werkzeug - INFO - 14086 - 127.0.0.1 - - [20/Sep/2021 06:31:42] "[37mGET /api/v1/cvparser/batch/task_result/7e68c657-54ce-47eb-8d77-725c3264ebb1 HTTP/1.1[0m" 200 -
+2021-09-20 06:32:01,695 - flask_app_batch - INFO - 14086 - <celery.backends.redis.RedisBackend object at 0x7f4dfdf94160>
+2021-09-20 06:32:01,696 - werkzeug - INFO - 14086 - 127.0.0.1 - - [20/Sep/2021 06:32:01] "[37mPOST /api/v1/cvparser/batch HTTP/1.1[0m" 200 -
+2021-09-20 06:32:01,710 - werkzeug - INFO - 14086 - 127.0.0.1 - - [20/Sep/2021 06:32:01] "[37mGET /api/v1/cvparser/batch/task_result/1914e5ea-c769-4937-8694-74be689d8d07 HTTP/1.1[0m" 200 -
+2021-09-20 06:32:24,068 - flask_app_batch - INFO - 14086 - <celery.backends.redis.RedisBackend object at 0x7f4df7f204f0>
+2021-09-20 06:32:24,069 - werkzeug - INFO - 14086 - 127.0.0.1 - - [20/Sep/2021 06:32:24] "[37mPOST /api/v1/cvparser/batch HTTP/1.1[0m" 200 -
+2021-09-20 06:32:24,083 - werkzeug - INFO - 14086 - 127.0.0.1 - - [20/Sep/2021 06:32:24] "[37mGET /api/v1/cvparser/batch/task_result/b884c675-36a9-4b1a-8194-ef7f6746fbf8 HTTP/1.1[0m" 200 -
+2021-09-20 06:32:41,875 - flask_app_batch - INFO - 14086 - <celery.backends.redis.RedisBackend object at 0x7f4df7f20160>
+2021-09-20 06:32:41,876 - werkzeug - INFO - 14086 - 127.0.0.1 - - [20/Sep/2021 06:32:41] "[37mPOST /api/v1/cvparser/batch HTTP/1.1[0m" 200 -
+2021-09-20 06:32:41,880 - werkzeug - INFO - 14086 - 127.0.0.1 - - [20/Sep/2021 06:32:41] "[37mGET /api/v1/cvparser/batch/task_result/683ed145-fea0-469b-bf15-503f5007a1d6 HTTP/1.1[0m" 200 -
+2021-09-20 06:32:41,894 - werkzeug - INFO - 14086 - 127.0.0.1 - - [20/Sep/2021 06:32:41] "[37mGET /api/v1/cvparser/batch/task_result/683ed145-fea0-469b-bf15-503f5007a1d6 HTTP/1.1[0m" 200 -
+2021-09-20 06:33:21,791 - werkzeug - INFO - 14086 -  * Detected change in '/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/flask_app_batch.py', reloading
+2021-09-20 06:33:21,820 - werkzeug - INFO - 8630 -  * Restarting with stat
+2021-09-20 06:33:23,702 - werkzeug - WARNING - 14860 -  * Debugger is active!
+2021-09-20 06:33:23,702 - werkzeug - INFO - 14860 -  * Debugger PIN: 141-963-743
+2021-09-20 06:35:14,158 - werkzeug - INFO - 14860 -  * Detected change in '/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/flask_app_batch.py', reloading
+2021-09-20 06:35:14,180 - werkzeug - INFO - 8630 -  * Restarting with stat
+2021-09-20 06:35:16,225 - werkzeug - WARNING - 14971 -  * Debugger is active!
+2021-09-20 06:35:16,226 - werkzeug - INFO - 14971 -  * Debugger PIN: 141-963-743
+2021-09-20 06:35:46,083 - werkzeug - INFO - 14971 -  * Detected change in '/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/flask_app_batch.py', reloading
+2021-09-20 06:35:46,105 - werkzeug - INFO - 8630 -  * Restarting with stat
+2021-09-20 06:35:48,231 - werkzeug - WARNING - 15021 -  * Debugger is active!
+2021-09-20 06:35:48,232 - werkzeug - INFO - 15021 -  * Debugger PIN: 141-963-743
+2021-09-20 06:37:36,602 - werkzeug - INFO - 15021 -  * Detected change in '/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/flask_app_batch.py', reloading
+2021-09-20 06:37:36,627 - werkzeug - INFO - 8630 -  * Restarting with stat
+2021-09-20 06:37:38,657 - werkzeug - WARNING - 15093 -  * Debugger is active!
+2021-09-20 06:37:38,657 - werkzeug - INFO - 15093 -  * Debugger PIN: 141-963-743
+2021-09-20 06:39:00,049 - werkzeug - INFO - 15093 -  * Detected change in '/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/flask_app_batch.py', reloading
+2021-09-20 06:39:00,070 - werkzeug - INFO - 8630 -  * Restarting with stat
+2021-09-20 06:45:51,049 - werkzeug - INFO - 15410 -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-09-20 06:45:51,055 - werkzeug - INFO - 15410 -  * Restarting with stat
+2021-09-20 06:45:52,895 - werkzeug - WARNING - 15422 -  * Debugger is active!
+2021-09-20 06:45:52,895 - werkzeug - INFO - 15422 -  * Debugger PIN: 141-963-743
+2021-09-20 06:46:01,003 - flask_app_batch - INFO - 15422 - <celery.backends.redis.RedisBackend object at 0x7f025ac9c040>
+2021-09-20 06:46:01,005 - werkzeug - INFO - 15422 - 127.0.0.1 - - [20/Sep/2021 06:46:01] "[37mPOST /api/v1/cvparser/batch HTTP/1.1[0m" 200 -
+2021-09-20 06:46:01,010 - werkzeug - INFO - 15422 - 127.0.0.1 - - [20/Sep/2021 06:46:01] "[37mGET /api/v1/cvparser/batch/task_result/3ff55eef-4a78-4fda-a235-914d39b39edd HTTP/1.1[0m" 200 -
+2021-09-20 06:46:01,027 - werkzeug - INFO - 15422 - 127.0.0.1 - - [20/Sep/2021 06:46:01] "[37mGET /api/v1/cvparser/batch/task_result/3ff55eef-4a78-4fda-a235-914d39b39edd HTTP/1.1[0m" 200 -
+2021-09-20 06:47:01,585 - werkzeug - INFO - 15422 -  * Detected change in '/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/flask_app_batch.py', reloading
+2021-09-20 06:47:01,620 - werkzeug - INFO - 15410 -  * Restarting with stat
+2021-09-20 06:47:03,772 - werkzeug - WARNING - 15672 -  * Debugger is active!
+2021-09-20 06:47:03,773 - werkzeug - INFO - 15672 -  * Debugger PIN: 141-963-743
+2021-09-20 06:47:12,326 - flask_app_batch - INFO - 15672 - <celery.backends.redis.RedisBackend object at 0x7fdb73d2c0d0>
+2021-09-20 06:47:12,328 - werkzeug - INFO - 15672 - 127.0.0.1 - - [20/Sep/2021 06:47:12] "[37mPOST /api/v1/cvparser/batch HTTP/1.1[0m" 200 -
+2021-09-20 06:47:12,344 - werkzeug - INFO - 15672 - 127.0.0.1 - - [20/Sep/2021 06:47:12] "[37mGET /api/v1/cvparser/batch/task_result/5001412c-a0a1-43c9-9d8e-969208e6a2a7 HTTP/1.1[0m" 200 -
+2021-09-20 06:47:37,237 - werkzeug - INFO - 15672 -  * Detected change in '/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/flask_app_batch.py', reloading
+2021-09-20 06:47:37,270 - werkzeug - INFO - 15410 -  * Restarting with stat
+2021-09-20 06:47:39,461 - werkzeug - WARNING - 15901 -  * Debugger is active!
+2021-09-20 06:47:39,462 - werkzeug - INFO - 15901 -  * Debugger PIN: 141-963-743
+2021-09-20 06:49:12,930 - flask_app_batch - INFO - 15901 - <celery.backends.redis.RedisBackend object at 0x7f011ba63040>
+2021-09-20 06:49:12,932 - werkzeug - INFO - 15901 - 127.0.0.1 - - [20/Sep/2021 06:49:12] "[37mPOST /api/v1/cvparser/batch HTTP/1.1[0m" 200 -
+2021-09-20 06:49:12,938 - werkzeug - INFO - 15901 - 127.0.0.1 - - [20/Sep/2021 06:49:12] "[37mGET /api/v1/cvparser/batch/task_result/70e05c79-7de9-4a4d-a263-5d5f8d635c1e HTTP/1.1[0m" 200 -
+2021-09-20 06:49:12,943 - werkzeug - INFO - 15901 - 127.0.0.1 - - [20/Sep/2021 06:49:12] "[37mGET /api/v1/cvparser/batch/task_result/70e05c79-7de9-4a4d-a263-5d5f8d635c1e HTTP/1.1[0m" 200 -
+2021-09-20 06:49:15,958 - werkzeug - INFO - 15901 - 127.0.0.1 - - [20/Sep/2021 06:49:15] "[37mGET /api/v1/cvparser/batch/task_result/70e05c79-7de9-4a4d-a263-5d5f8d635c1e HTTP/1.1[0m" 200 -
+2021-09-20 06:50:43,031 - flask_app_batch - INFO - 15901 - <celery.backends.redis.RedisBackend object at 0x7f011ba63130>
+2021-09-20 06:50:43,032 - werkzeug - INFO - 15901 - 127.0.0.1 - - [20/Sep/2021 06:50:43] "[37mPOST /api/v1/cvparser/batch HTTP/1.1[0m" 200 -
+2021-09-20 06:50:43,036 - werkzeug - INFO - 15901 - 127.0.0.1 - - [20/Sep/2021 06:50:43] "[37mGET /api/v1/cvparser/batch/task_result/6e78c44a-f3a2-44b5-a8e9-52758f5821c5 HTTP/1.1[0m" 200 -
+2021-09-20 06:50:43,040 - werkzeug - INFO - 15901 - 127.0.0.1 - - [20/Sep/2021 06:50:43] "[37mGET /api/v1/cvparser/batch/task_result/6e78c44a-f3a2-44b5-a8e9-52758f5821c5 HTTP/1.1[0m" 200 -
+2021-09-20 06:50:46,055 - werkzeug - INFO - 15901 - 127.0.0.1 - - [20/Sep/2021 06:50:46] "[37mGET /api/v1/cvparser/batch/task_result/6e78c44a-f3a2-44b5-a8e9-52758f5821c5 HTTP/1.1[0m" 200 -
+2021-09-20 06:51:49,226 - werkzeug - INFO - 15901 -  * Detected change in '/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/flask_app_batch.py', reloading
+2021-09-20 06:51:49,265 - werkzeug - INFO - 15410 -  * Restarting with stat
+2021-09-20 06:51:51,436 - werkzeug - WARNING - 16645 -  * Debugger is active!
+2021-09-20 06:51:51,437 - werkzeug - INFO - 16645 -  * Debugger PIN: 141-963-743
+2021-09-20 06:51:53,343 - werkzeug - INFO - 16645 -  * Detected change in '/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/flask_app_batch.py', reloading
+2021-09-20 06:51:53,363 - werkzeug - INFO - 15410 -  * Restarting with stat
+2021-09-20 06:51:55,509 - werkzeug - WARNING - 16673 -  * Debugger is active!
+2021-09-20 06:51:55,509 - werkzeug - INFO - 16673 -  * Debugger PIN: 141-963-743
+2021-09-20 06:53:54,689 - werkzeug - INFO - 16673 -  * Detected change in '/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/flask_app_batch.py', reloading
+2021-09-20 06:53:54,715 - werkzeug - INFO - 15410 -  * Restarting with stat
+2021-09-20 06:53:56,751 - werkzeug - WARNING - 16748 -  * Debugger is active!
+2021-09-20 06:53:56,751 - werkzeug - INFO - 16748 -  * Debugger PIN: 141-963-743
+2021-09-20 06:57:27,770 - werkzeug - INFO - 16748 -  * Detected change in '/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/flask_app_batch.py', reloading
+2021-09-20 06:57:27,800 - werkzeug - INFO - 15410 -  * Restarting with stat
+2021-09-20 06:57:29,886 - werkzeug - WARNING - 16811 -  * Debugger is active!
+2021-09-20 06:57:29,886 - werkzeug - INFO - 16811 -  * Debugger PIN: 141-963-743
+2021-09-20 06:58:12,281 - werkzeug - INFO - 16811 -  * Detected change in '/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/flask_app_batch.py', reloading
+2021-09-20 06:58:12,311 - werkzeug - INFO - 15410 -  * Restarting with stat
+2021-09-20 06:58:14,277 - werkzeug - WARNING - 16867 -  * Debugger is active!
+2021-09-20 06:58:14,277 - werkzeug - INFO - 16867 -  * Debugger PIN: 141-963-743
+2021-09-20 06:58:21,846 - werkzeug - INFO - 16867 -  * Detected change in '/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/SplitReq-Parser/flask_app_batch.py', reloading
+2021-09-20 06:58:21,875 - werkzeug - INFO - 15410 -  * Restarting with stat
+2021-09-20 06:58:23,979 - werkzeug - WARNING - 16918 -  * Debugger is active!
+2021-09-20 06:58:23,980 - werkzeug - INFO - 16918 -  * Debugger PIN: 141-963-743
+2021-09-29 02:28:09,846 - werkzeug - INFO - 4511 -  * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+2021-09-29 02:28:09,853 - werkzeug - INFO - 4511 -  * Restarting with stat
+2021-09-29 02:28:14,799 - werkzeug - WARNING - 4594 -  * Debugger is active!
+2021-09-29 02:28:14,800 - werkzeug - INFO - 4594 -  * Debugger PIN: 548-588-223
+2021-09-29 02:30:43,722 - werkzeug - INFO - 4594 -  * Detected change in '/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/single_parser/test_scripts/single_api_Call.py', reloading
+2021-09-29 02:30:43,872 - werkzeug - INFO - 4511 -  * Restarting with stat
+2021-09-29 02:30:48,956 - werkzeug - WARNING - 5595 -  * Debugger is active!
+2021-09-29 02:30:48,957 - werkzeug - INFO - 5595 -  * Debugger PIN: 548-588-223
+2021-09-29 02:30:59,623 - werkzeug - INFO - 5595 -  * Detected change in '/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/single_parser/test_scripts/single_api_Call.py', reloading
+2021-09-29 02:30:59,762 - werkzeug - INFO - 4511 -  * Restarting with stat
+2021-09-29 02:31:04,702 - werkzeug - WARNING - 5766 -  * Debugger is active!
+2021-09-29 02:31:04,703 - werkzeug - INFO - 5766 -  * Debugger PIN: 548-588-223
+2021-09-29 02:32:14,255 - werkzeug - INFO - 5766 -  * Detected change in '/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/single_parser/test_scripts/single_api_Call.py', reloading
+2021-09-29 02:32:14,459 - werkzeug - INFO - 4511 -  * Restarting with stat
+2021-09-29 02:32:19,624 - werkzeug - WARNING - 6358 -  * Debugger is active!
+2021-09-29 02:32:19,624 - werkzeug - INFO - 6358 -  * Debugger PIN: 548-588-223
+2021-09-29 02:32:26,106 - werkzeug - INFO - 6358 -  * Detected change in '/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/single_parser/test_scripts/single_api_Call.py', reloading
+2021-09-29 02:32:26,228 - werkzeug - INFO - 4511 -  * Restarting with stat
+2021-09-29 02:32:31,256 - werkzeug - WARNING - 6489 -  * Debugger is active!
+2021-09-29 02:32:31,256 - werkzeug - INFO - 6489 -  * Debugger PIN: 548-588-223
+2021-09-29 02:33:37,940 - werkzeug - INFO - 6489 -  * Detected change in '/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/single_parser/test_scripts/single_api_Call.py', reloading
+2021-09-29 02:33:38,100 - werkzeug - INFO - 4511 -  * Restarting with stat
+2021-09-29 02:33:43,390 - werkzeug - WARNING - 7007 -  * Debugger is active!
+2021-09-29 02:33:43,390 - werkzeug - INFO - 7007 -  * Debugger PIN: 548-588-223
+2021-09-29 02:34:31,496 - werkzeug - INFO - 7007 -  * Detected change in '/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/single_parser/test_scripts/single_api_Cal_linux.py', reloading
+2021-09-29 02:34:31,637 - werkzeug - INFO - 4511 -  * Restarting with stat
+2021-09-29 02:34:36,695 - werkzeug - WARNING - 7427 -  * Debugger is active!
+2021-09-29 02:34:36,695 - werkzeug - INFO - 7427 -  * Debugger PIN: 548-588-223
+2021-09-29 02:35:18,404 - werkzeug - INFO - 7427 -  * Detected change in '/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/single_parser/test_scripts/single_api_Cal_linux.py', reloading
+2021-09-29 02:35:18,553 - werkzeug - INFO - 4511 -  * Restarting with stat
+2021-09-29 02:35:23,862 - werkzeug - WARNING - 7864 -  * Debugger is active!
+2021-09-29 02:35:23,863 - werkzeug - INFO - 7864 -  * Debugger PIN: 548-588-223
+2021-09-29 02:36:13,552 - werkzeug - INFO - 7864 -  * Detected change in '/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/single_parser/test_scripts/single_api_Cal_linux.py', reloading
+2021-09-29 02:36:13,736 - werkzeug - INFO - 4511 -  * Restarting with stat
+2021-09-29 02:36:18,983 - werkzeug - WARNING - 8301 -  * Debugger is active!
+2021-09-29 02:36:18,984 - werkzeug - INFO - 8301 -  * Debugger PIN: 548-588-223
+2021-09-29 02:36:47,258 - werkzeug - INFO - 8301 -  * Detected change in '/mnt/c/Users/Mohit Khanwale/Desktop/SplitReq/single_parser/flask_app_single.py', reloading
+2021-09-29 02:36:47,517 - werkzeug - INFO - 4511 -  * Restarting with stat
+2021-09-29 02:37:02,290 - werkzeug - INFO - 8700 -  * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+2021-09-29 02:37:25,766 - werkzeug - INFO - 8700 - 127.0.0.1 - - [29/Sep/2021 02:37:25] "POST /api/v1/cvparser/single HTTP/1.1" 200 -
+2021-09-29 02:37:38,551 - werkzeug - INFO - 8700 - 127.0.0.1 - - [29/Sep/2021 02:37:38] "POST /api/v1/cvparser/single HTTP/1.1" 200 -
+2021-09-29 02:37:54,517 - werkzeug - INFO - 8700 - 127.0.0.1 - - [29/Sep/2021 02:37:54] "POST /api/v1/cvparser/single HTTP/1.1" 200 -
