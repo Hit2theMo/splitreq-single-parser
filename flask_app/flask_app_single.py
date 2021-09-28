@@ -9,10 +9,8 @@ import pathlib
 # import zipfile
 
 import shortuuid
-from celery import Celery
 from flask import Flask, jsonify, request
 from sentry_sdk import capture_message
-from redis import Redis
 # from batch_parsing import parseUnzippedResumes
 from resume_parser import extractDataPoints
 
@@ -37,9 +35,6 @@ batch_logger = logging.getLogger("batch_parsing")
 
 app = Flask(__name__)
 # app.logger.addHandler(flask_file_handler)
-redis_obj = Redis(host='localhost', port='6379')
-simple_app = Celery('batch_parsing', broker='redis://localhost:6379/0',
-                    backend='redis://localhost:6379/0')
 
 username_err_msg = {
     "Error": "Invalid Account",
@@ -211,6 +206,5 @@ def parseResume():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
-# celery --broker=redis://localhost:6379/0 flower --port=8080
-# celery -A batch_parsing  worker --loglevel=INFO
+    app.run(debug=False, port=8080)
+
