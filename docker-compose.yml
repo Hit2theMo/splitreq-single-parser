@@ -4,14 +4,13 @@ services:
     build: './flask_app'
     restart: always
     ports:
-      - "5000:5000"
-    command: /usr/local/bin/gunicorn -w 9 -b 0.0.0.0:5000 wsgi:app
+      - "5050:5050"
+    command: /usr/local/bin/gunicorn -w 1 -b 0.0.0.0:5050 wsgi:app
 
   nginx:
     build: ./nginx
-    #container_name: nginx
     restart: always
     ports:
-      - "80:80"
+      - "81:81"
     depends_on:
       - flask_app

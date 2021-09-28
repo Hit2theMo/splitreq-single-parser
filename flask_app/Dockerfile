@@ -16,3 +16,4 @@ WORKDIR /flask-app
 RUN pip install -r requirements.txt
 RUN python -m spacy download en_core_web_md
 
+#RUN /usr/local/bin/gunicorn -w 9 -b 0.0.0.0:5000 wsgi:app
