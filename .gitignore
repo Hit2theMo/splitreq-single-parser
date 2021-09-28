@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+*$py.class
+myvenv
+linuxenv
+.vscode
+resumes
+uploaded_files
+batch_parsing
+prodenv
+logs/*
+*.log
+dump.rdb
+venv

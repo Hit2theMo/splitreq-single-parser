@@ -1,0 +1,13 @@
+version: "3.7"
+services:
+  flask_app:
+    build: './flask_app'
+    restart: always
+    ports:
+      - "5000:5000"
+    volumes:
+      - file-uploads:/flask-app/batch_parsing
+    command: /usr/local/bin/gunicorn -w 9 -b 0.0.0.0:5000 wsgi:app
+    depends_on:
+      - redis
+
